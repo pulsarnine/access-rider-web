@@ -1,7 +1,18 @@
+//this is the homepage or launch for the site, it should be simple and might end up being the easy read instructions
+
 import Image from "next/image";
+import NavBar from "../app/components/navigation.tsx"
 
 export default function Home() {
   return (
+    <p>Hello World </p>
+  )
+}
+
+/*
+export default function Home() {
+  return (
+    NavBar,
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
         <Image
@@ -64,3 +75,4 @@ export default function Home() {
     </div>
   );
 }
+*/
