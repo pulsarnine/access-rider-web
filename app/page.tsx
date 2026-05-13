@@ -1,78 +1,69 @@
 //this is the homepage or launch for the site, it should be simple and might end up being the easy read instructions
+'use client'
 
 import Image from "next/image";
-import NavBar from "../app/components/navigation.tsx"
+import HeaderSimple from "./components/HeaderSimple"
+import React, { useState, useEffect } from "react";
+
 
 export default function Home() {
+    useEffect ( () => {
+      document.title = "Access Rider";
+    }, []);
+  const [size, setSize] = useState(16);
+  
+  if (size < 16) {
+    setSize(16);
+    alert("no lower than 16px");
+  }
+  if (size > 72) {
+    setSize(72);
+    alert("no higher than 72px");
+  }
   return (
-    <p>Hello World </p>
+    <>
+      <HeaderSimple />
+      <div className="absolute left-1/2 top-1/2 w-52 lg:w-[400px]
+      h-52 lg:h[400px] bg-red-500 -translate-x-1/2 -translate-y-1/2 -z-10 
+      blur-[150px]">
+      </div>
+      <div className="p-8 max-w-3xl mx-auto">
+        <h1 className="text-4xl lg:text-6xl font-bold
+        text-center">
+          Font Size Changer</h1>
+
+        <ul className="flex items-center justify-center gap-4 mt-10">
+          <li>
+            <button onClick={() => setSize(size - 4)} className="py-2 px-6 rounded shadow bg-[#333333] 
+            text-white hover:bg-[#222222]">Decrease</button>
+          </li>
+          <li>
+            <button onClick={() => setSize(size + 4)}className="py-2 px-6 rounded shadow bg-[#333333] 
+            text-white hover:bg-[#222222]">Increase</button>
+          </li>
+        </ul>
+        <div className="flex flex-col gap-8 mt-10">
+          <p style={{
+            fontSize: size,
+          }}>
+            Lorem ipsum dolor sit amet consectetur, 
+            adipisicing elit. Mollitia doloremque ducimus 
+            harum enim. Aut temporibus ullam sunt id error nulla.
+          </p>
+          <p style={{
+            fontSize: size,
+          }}>
+            Lorem ipsum dolor sit amet consectetur adipisicing 
+            elit. Repellat blanditiis cumque ex cum enim 
+            necessitatibus natus temporibus maiores eligendi 
+            ratione minus nisi, ea, fuga facilis aliquid veniam 
+            recusandae autem modi.
+          </p>
+        </div>
+      </div>
+      
+      
+    </>
   )
 }
 
-/*
-export default function Home() {
-  return (
-    NavBar,
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            This page is the homepage of the site, with easy to access links to the other pages and a simple design.
-          </h1>
-
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
-}
-*/

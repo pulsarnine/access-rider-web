@@ -30,6 +30,18 @@
   }
 }
 
+[data-theme='red'] {
+  --primary-color: #630000;
+  --background-color: #000;
+  --text-color: #ebe0e0;
+}
+
+
+/* for font size */
+*{
+  transition: all 0.18s ease-in-out;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);

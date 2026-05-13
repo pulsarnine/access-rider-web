@@ -1,9 +1,17 @@
+'use client'
 import Link from 'next/link'
-import Button from '../components/button.tsx'
+import { Button } from '@mantine/core'
+import React, { useEffect } from "react";
+import HeaderSimple from '../components/HeaderSimple';
+
 
 export default function Explanation() {
+    useEffect ( () => {
+        document.title = "Access Rider ┃ What is an Access Rider?";    
+    }, []);
     return (
         <>
+        <HeaderSimple />
         <h1>This page contains information about what an access rider is for those receiving one</h1>
         <h2>What is an access rider?</h2>
         <p>An access rider is a document which disabled people can create and share to provide information about 
@@ -22,9 +30,18 @@ export default function Explanation() {
         </p>
         //insert charities
         <h2>Further Reading</h2>
-        <Button><Link className='text-ul' href="https://historicengland.org.uk/advice/inclusion/make-heritage-accessible/access-rider/">Historic England</Link></Button>
-        <p>Text break</p>
-        <Button><Link className='text-ul' href="https://www.shapearts.org.uk/News/access-docs-for-artists-resource/">Shapearts</Link></Button>
+        
+        <Link className='text-ul' href="https://historicengland.org.uk/advice/inclusion/make-heritage-accessible/access-rider/">
+            <Button variant="filled" color="teal" size="sm">
+                Historic England
+            </Button>
+        </Link>
+        <br />
+        <Link className='text-ul' href="https://www.shapearts.org.uk/News/access-docs-for-artists-resource/">
+            <Button variant="filled" color="teal" size="sm">
+                Shapearts
+            </Button>
+        </Link>
         </>
     )
 }   

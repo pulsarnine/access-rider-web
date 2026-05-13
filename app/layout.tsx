@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-//import  "bootstrap/dist/css/bootstrap.min.css";
+import '@mantine/core/styles.css';
+import { ColorSchemeScript, MantineProvider, mantineHtmlProps } from '@mantine/core';
+import HeaderSimple from "./components/HeaderSimple";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,9 +16,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Access Rider",
-  description: "Learn about and Create Access Rider",
+  description: "Learn about and Create an Access Rider",
 };
+
+// const theme = createTheme({
+//    /** Your theme override here */
+// });
 
 export default function RootLayout({
   children,
@@ -27,8 +32,16 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      {...mantineHtmlProps}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <head>
+
+        <title>Access Rider</title> 
+      </head>
+      <body className="min-h-full flex flex-col">
+        <MantineProvider /*theme={theme}*/ defaultColorScheme="dark">{children}</MantineProvider>
+      </body>
+
     </html>
   );
 }
