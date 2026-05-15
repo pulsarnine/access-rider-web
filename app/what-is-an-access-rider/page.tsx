@@ -1,8 +1,10 @@
 'use client'
 import Link from 'next/link'
-import { Button } from '@mantine/core'
+import { Button, List } from '@mantine/core'
 import React, { useEffect } from "react";
 import HeaderSimple from '../components/HeaderSimple';
+import FAQSimple from './FAQSimple';
+import Head from 'next/head';
 
 
 export default function Explanation() {
@@ -12,36 +14,76 @@ export default function Explanation() {
     return (
         <>
         <HeaderSimple />
-        <h1>This page contains information about what an access rider is for those receiving one</h1>
-        <h2>What is an access rider?</h2>
-        <p>An access rider is a document which disabled people can create and share to provide information about 
-        their access needs. It will provide all the necessary information to ensure the receiving party can take the actions 
-        required.</p>
-        <h2>What action does the recipient need to take?</h2>
-        <p>So, you just received an access rider, what now? 
-        <br /> The first thing to do is read through the document, you should make sure that you understand 
-        what all of the individuals requirements are. If there are any parts which you're confused about, it is
-        worth asking the person who sent the rider to you for clarification.</p>
-        <h2>Emergency Information</h2>
-        <p>It may also include information about the indivudals emergency contacts and what to do in an emergency.
-        <br /> 
-        It is also worth noting down some of these charities who may be able to provide further support or reading for 
-        specific access requirements.
-        </p>
-        //insert charities
-        <h2>Further Reading</h2>
-        
-        <Link className='text-ul' href="https://historicengland.org.uk/advice/inclusion/make-heritage-accessible/access-rider/">
-            <Button variant="filled" color="teal" size="sm">
-                Historic England
-            </Button>
-        </Link>
-        <br />
-        <Link className='text-ul' href="https://www.shapearts.org.uk/News/access-docs-for-artists-resource/">
-            <Button variant="filled" color="teal" size="sm">
-                Shapearts
-            </Button>
-        </Link>
+        <FAQSimple />
+        <div className="p-8">
+            <h2>
+                In an Emergency
+            </h2>
+            <p>
+                Source: 
+                { " " }
+                <a target="_blank" href="https://www.nhs.uk/tests-and-treatments/first-aid/">
+                    nhs.uk
+                </a>
+            </p>
+            <List type="ordered" listStyleType="disc" start={1}>
+                <List.Item>
+                    Check there is no further danger to yourself or the individual.
+                </List.Item>
+                <List withPadding listStyleType="disc">
+                    <List.Item>If someone is unconscious but breathing you should put them in the recovery position.</List.Item>
+                    <List.Item>If someone is unconscious and not breathing you should start CPR immediately and phone 999.</List.Item>
+                </List>
+                <List.Item>If necessary, dial 999 for an ambulance.</List.Item>
+                <List withPadding listStyleType="disc">
+                    <List.Item>
+                        You will be asked your telephone number, your location, a brief description of the individual and their state 
+                        (eg bleeding, unconscious, not breathing)
+                    </List.Item>
+                </List>
+                <List.Item>Carry out basic first aid where required</List.Item>
+                <List.Item>Once the situation is stable, or when you can ask someone else to, you should contact the individual’s 
+                    emergency contacts. 
+                </List.Item>
+            </List>  
+            
+            <h1>This page contains information about what an access rider is for those receiving one</h1>
+            <h2>What is an access rider?</h2>
+            <p>An access rider is a document which disabled people can create and share to provide information about 
+            their access needs. It will provide all the necessary information to ensure the receiving party can take the actions 
+            required.</p>
+            <h2>What action does the recipient need to take?</h2>
+            <p>So, you just received an access rider, what now? 
+            <br /> The first thing to do is read through the document, you should make sure that you understand 
+            what all of the individuals requirements are. If there are any parts which you're confused about, it is
+            worth asking the person who sent the rider to you for clarification.</p>
+            <h2>Emergency Information</h2>
+            <p>It may also include information about the indivudals emergency contacts and what to do in an emergency.
+            <br /> 
+            It is also worth noting down some of these charities who may be able to provide further support or reading for 
+            specific access requirements.
+            </p>
+            //insert charities
+            <h2>Further Reading</h2>
+            
+            <Link className='text-ul' href="https://historicengland.org.uk/advice/inclusion/make-heritage-accessible/access-rider/">
+                <Button variant="filled" color="teal" size="sm">
+                    Historic England
+                </Button>
+            </Link>
+            <br />
+            <Link className='text-ul' href="https://www.shapearts.org.uk/News/access-docs-for-artists-resource/">
+                <Button variant="filled" color="teal" size="sm">
+                    Shapearts
+                </Button>
+            </Link>
+
+            //lots of links 
+            // if time i could make this so you can sort/search for relevant ones
+            <p>
+                Links for many different charities can be found below
+            </p>
+        </div>
         </>
     )
 }   

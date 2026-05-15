@@ -4,7 +4,9 @@
 import Image from "next/image";
 import HeaderSimple from "./components/HeaderSimple"
 import React, { useState, useEffect } from "react";
-
+import FeaturesTitle from "./homepage/FeaturesTitle";
+import Dropdown from "./components/FontDropdown";
+//import SkipLink from "./components/SkipLink";
 
 export default function Home() {
     useEffect ( () => {
@@ -22,7 +24,11 @@ export default function Home() {
   }
   return (
     <>
+      {/* <SkipLink /> */}
       <HeaderSimple />
+      <Dropdown />
+
+      {/* <FeaturesTitle /> */}
       <div className="absolute left-1/2 top-1/2 w-52 lg:w-[400px]
       h-52 lg:h[400px] bg-red-500 -translate-x-1/2 -translate-y-1/2 -z-10 
       blur-[150px]">
@@ -30,7 +36,8 @@ export default function Home() {
       <div className="p-8 max-w-3xl mx-auto">
         <h1 className="text-4xl lg:text-6xl font-bold
         text-center">
-          Font Size Changer</h1>
+          Welcome to Access Rider Web!
+        </h1>
 
         <ul className="flex items-center justify-center gap-4 mt-10">
           <li>
@@ -61,8 +68,12 @@ export default function Home() {
           </p>
         </div>
       </div>
-      
-      
+      <div className="flex justify-center" >
+        <p>
+          This website is a tool to create Access Riders, teach people more about them and raise awareness of their uses. 
+        </p>
+      </div>
+    
     </>
   )
 }

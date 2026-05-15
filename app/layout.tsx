@@ -1,19 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import '@mantine/core/styles.css';
 import { ColorSchemeScript, MantineProvider, mantineHtmlProps } from '@mantine/core';
-import HeaderSimple from "./components/HeaderSimple";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import HeaderSimple from "./components/HeaderSimple"; 
+import {geistSans, geistMono, openSans, courierPrime, comicRelief, openDyslexic } from './fonts';
+import siteFont from "./components/FontDropdown";
 
 export const metadata: Metadata = {
   description: "Learn about and Create an Access Rider",
@@ -31,15 +22,15 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${courierPrime.variable}  h-full antialiased`}
       {...mantineHtmlProps}
     >
       <head>
-
         <title>Access Rider</title> 
       </head>
-      <body className="min-h-full flex flex-col">
-        <MantineProvider /*theme={theme}*/ defaultColorScheme="dark">{children}</MantineProvider>
+      <body className={`min-h-full flex flex-col ${openSans.className}`}>
+        <MantineProvider defaultColorScheme="dark">{children}</MantineProvider>
+        {/* <MantineProvider theme={customTheme} defaultColorScheme="dark">{children}</MantineProvider> */}
       </body>
 
     </html>

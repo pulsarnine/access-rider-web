@@ -15,6 +15,7 @@ import { useDisclosure } from '@mantine/hooks';
 //import { MantineLogo } from '@mantinex/mantine-logo';
 import classes from './HeaderSimple.module.css';
 import Link from 'next/link';
+import ThemeToggle from './ColorSwitcher';
 
 const links = [
   { link: '/create', label: 'Create' },
@@ -54,6 +55,7 @@ export default function HeaderSimple() {
         <Group gap={5} visibleFrom="xs">
           {items}
         </Group>
+        <ThemeToggle />
 
         <Burger
           opened={opened}
@@ -81,11 +83,3 @@ export default function HeaderSimple() {
     </header>
   );
 }
-
-/* yk how Holly wants to change the names of the TechSoc exec roles to 'CXO'
-We decided that E&HM would be 'CTOO', no mistake, as Chief Technical Operations Officer */
-/* So, officially I am a behringer microphone */
-//Fuck u 
-// website.tsx.ystv.yippee.joyandwhimsy.org <- expensive aahhh domain name
-// @johnny whyd you suggest this 
-// Who are you

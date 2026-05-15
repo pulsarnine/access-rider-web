@@ -45,5 +45,16 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+*:focus { 
+  /* some exciting focus styles */ 
+  outline: 0.1em #ac2222 solid;
+  outline-offset: 0.1rem;
+}
+
+*:focus-visible { 
+  /* some even *more* exciting button focus styles, just for keyboard navigators */
+  outline: 0.25em #e17e06 dashed;
+  outline-offset: 0.25rem;
 }
