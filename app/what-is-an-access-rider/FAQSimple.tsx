@@ -1,6 +1,8 @@
 import { Accordion, Container, Title } from '@mantine/core';
 import classes from './FAQSimple.module.css';
 
+const ans0 =
+  'An access rider is a document which disabled people can create and share to provide information about their access needs. It will provide all the necessary information to ensure the receiving party can take the actions required.'
 const ans1 =
   'Anyone can write or provide an access rider to their employer or co-workers, but they are frequently written and shared by disabled, D/deaf or neurodivergent people.';
 const ans2 = 
@@ -20,6 +22,11 @@ const ans6 =
       </Title> */}
 
       <Accordion variant="separated">
+        <Accordion.Item className={classes.item} value="what">
+          <Accordion.Control>What is an access rider?</Accordion.Control>
+          <Accordion.Panel>{ans0}</Accordion.Panel>
+        </Accordion.Item>
+
         <Accordion.Item className={classes.item} value="who">
           <Accordion.Control>Who might write or provide an access rider?</Accordion.Control>
           <Accordion.Panel>{ans1}</Accordion.Panel>
@@ -41,6 +48,11 @@ const ans6 =
             It is good practice to begin the conversation as an employer, if you are asking all your employees 
             for their access needs it removes the stigma when some want to share. It will also create a more 
             welcoming and likely more productive workspace for everyone!
+            <br />
+            <br />
+            When you receive the document the first thing to do is read through it, you should make sure that 
+            you understand what all of the individuals requirements are. If there are any parts which you're 
+            confused about, you should ask the person who sent the rider to you for clarification.
             <br />
             <br />
             When you receive the rider you should read it thoroughly and make sure that you fully understand 

@@ -11,7 +11,6 @@ export default function Instructions() {
     }, []);
     return (
         <>
-            <HeaderSimple />
             <div className="p-8">
                 <h1> This page is how to use the website </h1>
                 <p> It will contain content in an easy read format, including images, on how to use the site </p>
@@ -45,7 +44,7 @@ export default function Instructions() {
                 The 
                 <Link href="/what-is-an-access-rider">
                     <Button variant="filled" color="teal" size="sm">
-                    What Is an Access Rider
+                    Learn More
                     </Button>
                 </Link>
                 page is for people who are sent an access rider, or others who are learning, to find out more about the document and what to do 
@@ -62,7 +61,8 @@ export default function Instructions() {
                 <h3>Using the create page</h3>
                 <List type="ordered">
                     <List.Item>
-                        Choose a section from the drop downs, or create your own – add any titles that you feel necessary!
+                        Choose a section from the suggested drop downs, or create your own – add custom sections as you like 
+                        and you can remove others. 
                     </List.Item>
                     <List.Item>
                         Fill In your information for that section, you can come back and edit this later. You could also do 

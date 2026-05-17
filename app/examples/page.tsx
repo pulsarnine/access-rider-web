@@ -11,11 +11,10 @@ export default function Examples() {
     }, []);
     return(
         <>
-        <HeaderSimple />
         <div className="p-8">
             <h1> This page contains some examples of access riders</h1>
             <p>
-                Access riders can come in many forms, both more detailed and more concise, whichever will best suit your needs and 
+                Access riders can come in many forms, both more detailed or concise, whichever will best suit your needs and 
                 communication preferences. Depending on the industry that you work in, you may need to include different parts or 
                 have different key access needs you wish to communicate. Some example access riders can be found on this page, 
                 with a brief synopsis of the industry and access needs of the author. You can either read these on the website or 

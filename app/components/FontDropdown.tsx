@@ -4,25 +4,29 @@
 'use client'
 import { useState } from 'react';
 import { ChevronDown } from "@deemlol/next-icons";
+import { useSetFont } from './SetFontProvider';
+import { FontList, Fonts, TFontList } from './fonts';
+import { useMantineColorScheme } from '@mantine/core';
 
-export default function Dropdown() {
+export default function FontDropdown() {
     const [isOpen, setIsOpen] = useState(false);
     const [siteFont, setSelectedFont] = useState('Select Font');
+    const { colorScheme } = useMantineColorScheme();
 
-    const fonts = ['openSans', 'courierPrime', 
-                       'comicRelief', 'openDyslexic'];
+    const setFont = useSetFont();
 
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
     };
 
-    const handleSelect = (fonts) => {
-        setSelectedFont(fonts);
+    const handleSelect = (font: TFontList) => {
+        // setSelectedFont(fonts);
+        setFont(font);
         setIsOpen(false);
     };
 
     return (
-        <div className="flex justify-center min-h-screen">
+        <div className={"flex justify-center"}>
             <div className="relative inline-block text-left">
                 {/* Dropdown button */}
                 <button
@@ -44,16 +48,16 @@ export default function Dropdown() {
                                     shadow-lg bg-white ring-1 ring-black
                                     ring-opacity-5 focus:outline-none">
                         <div className="py-1">
-                            {fonts.map((fonts, index) => (
+                            {FontList.map((font, index) => (
                                 <a
                                     key={index}
                                     href="#"
                                     className="block px-4 py-2
                                                text-sm text-black
                                                hover:bg-gray-100"
-                                    onClick={() => handleSelect(fonts)}
+                                    onClick={() => handleSelect(font)}
                                 >
-                                    {fonts}
+                                    {font}
                                 </a>
                             ))}
                         </div>

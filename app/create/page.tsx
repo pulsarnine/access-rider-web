@@ -7,6 +7,7 @@ import { List, ThemeIcon } from "@mantine/core";
 import { Accessibility } from "@deemlol/next-icons"
 import ThemeSelector from "../components/ColorSwitcher";
 import ThemeToggle from "../components/ColorSwitcher";
+import MyInput from "./section";
 
 export default function Create() {
     useEffect ( () => {
@@ -14,7 +15,6 @@ export default function Create() {
   }, []);
     return(
       <>
-        <HeaderSimple />
         <div className="flex justify-center p-8">
           <p>
             Writing an Access Rider can be emotionally difficult, due to the barriers that society puts up for disabled people, 
@@ -56,19 +56,8 @@ export default function Create() {
           height={500}
           alt="Picture of a green frog"
         />
-        
+        <MyInput />
         <ContainedInputs />
-        <div>
-          <h1>This page is the main page of the site</h1>
-            <p>
-              Here you can create and write your own access rider. 
-              This site will allow you to enter information and text which is then used to create an access rider for you.
-              <br /> 
-              You can customise the document as far as you would like, some suggested sections are listed below but feel free 
-              to add custom sections as well as removing others.
-            </p>
-            
-        </div>
       </>
     )
 }

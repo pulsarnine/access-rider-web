@@ -5,7 +5,6 @@ import Image from "next/image";
 import HeaderSimple from "./components/HeaderSimple"
 import React, { useState, useEffect } from "react";
 import FeaturesTitle from "./homepage/FeaturesTitle";
-import Dropdown from "./components/FontDropdown";
 //import SkipLink from "./components/SkipLink";
 
 export default function Home() {
@@ -25,8 +24,6 @@ export default function Home() {
   return (
     <>
       {/* <SkipLink /> */}
-      <HeaderSimple />
-      <Dropdown />
 
       {/* <FeaturesTitle /> */}
       <div className="absolute left-1/2 top-1/2 w-52 lg:w-[400px]

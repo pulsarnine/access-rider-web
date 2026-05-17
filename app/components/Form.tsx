@@ -1,0 +1,149 @@
+// components/Form.js
+
+import React, { useState } from "react";
+import styles from "./Form.module.css"; // Updated import path
+
+export default function Form() {
+    const [formData, setFormData] = useState({
+        firstName: "",
+        lastName: "",
+        email: "",
+        address: "",
+        age: "",
+        gender: "",
+        interests: [],
+    });
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log("Form Data:", formData);
+    };
+    const handleChange = (e: Event) => {
+    const { name, value, type, checked, options } = e.target;
+        if (type === "checkbox") {
+            const selectedOptions = Array.from(options)
+                .filter((option) => option.selected)
+                .map((option) => option.value);
+            setFormData({ ...formData, [name]: selectedOptions });
+        } else if (type === "radio" && checked) {
+            setFormData({ ...formData, [name]: value });
+        } else {
+            setFormData({ ...formData, [name]: value });
+        }
+    };
+
+    return (   
+        <form className={styles.form} onSubmit={handleSubmit}>
+            <label htmlFor="firstName" className={styles.label}>
+                First Name:
+            </label>
+            <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                value={formData.firstName}
+                onChange={handleChange}
+                className={styles.input} />
+
+            <label htmlFor="lastName" className={styles.label}>
+                Last Name:
+            </label>
+            <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                value={formData.lastName}
+                onChange={handleChange}
+                className={styles.input} />
+
+            <label htmlFor="email" className={styles.label}>
+                Email:
+            </label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                className={styles.input} />
+
+            <label htmlFor="address" className={styles.label}>
+                Address:
+            </label>
+            <textarea
+                id="address"
+                name="address"
+                value={formData.address}
+                onChange={handleChange}
+                className={styles.input} />
+
+            <label htmlFor="age" className={styles.label}>
+                Age:
+            </label>
+            <input
+                type="number"
+                id="age"
+                name="age"
+                value={formData.age}
+                onChange={handleChange}
+                className={styles.input} />
+
+            <label className={styles.label}>Gender:</label>
+
+            <span style={{ display: "flex" }}>
+                <label
+                    style={{ width: "20px" }}
+                    htmlFor="male"
+                    className={styles.label}>
+                    Male
+                </label>
+                <input
+                    type="radio"
+                    id="male"
+                    name="gender"
+                    value="male"
+                    checked={formData.gender === "male"}
+                    onChange={handleChange}
+                    className={styles.radio} />
+            </span>
+            <span style={{ display: "flex" }}>
+                <label
+                    style={{ width: "20px" }}
+                    htmlFor="female"
+                    className={styles.label}>
+                    Female
+                </label>
+                <input
+                    type="radio"
+                    id="female"
+                    name="gender"
+                    value="female"
+                    checked={formData.gender === "female"}
+                    onChange={handleChange}
+                    className={styles.radio} />
+            </span>
+
+            <label htmlFor="interests" className={styles.label}>
+                Interests:
+            </label>
+            <select
+                id="interests"
+                name="interests"
+                multiple
+                value={formData.interests}
+                onChange={handleChange}
+                className={styles.select}>
+                <option value="coding">Coding</option>
+                <option value="reading">Reading</option>
+                <option value="music">Music</option>
+            </select>
+
+            <button type="submit" className={styles.button}>
+                Submit
+            </button>
+            <button type="reset" className={styles.button}>
+                Reset
+            </button>
+        </form>
+    );
+};

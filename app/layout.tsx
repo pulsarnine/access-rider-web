@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import '@mantine/core/styles.css';
 import { ColorSchemeScript, MantineProvider, mantineHtmlProps } from '@mantine/core';
-import HeaderSimple from "./components/HeaderSimple"; 
-import {geistSans, geistMono, openSans, courierPrime, comicRelief, openDyslexic } from './fonts';
+import HeaderSimple from "./components/HeaderSimple";
+import { Fonts } from './components/fonts';
 import siteFont from "./components/FontDropdown";
+import { SetFontProvider } from "./components/SetFontProvider";
 
 export const metadata: Metadata = {
   description: "Learn about and Create an Access Rider",
@@ -22,14 +23,17 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${courierPrime.variable}  h-full antialiased`}
+      className={`${Fonts.courierPrime.variable}  h-full antialiased`}
       {...mantineHtmlProps}
     >
       <head>
-        <title>Access Rider</title> 
+        <title>Access Rider</title>
       </head>
-      <body className={`min-h-full flex flex-col ${openSans.className}`}>
-        <MantineProvider defaultColorScheme="dark">{children}</MantineProvider>
+
+      <body className={`min-h-full flex flex-col`}>
+        <SetFontProvider>
+          <MantineProvider defaultColorScheme="dark"><HeaderSimple />{children}</MantineProvider>
+        </SetFontProvider>
         {/* <MantineProvider theme={customTheme} defaultColorScheme="dark">{children}</MantineProvider> */}
       </body>
 

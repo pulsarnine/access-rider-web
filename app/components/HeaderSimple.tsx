@@ -16,6 +16,8 @@ import { useDisclosure } from '@mantine/hooks';
 import classes from './HeaderSimple.module.css';
 import Link from 'next/link';
 import ThemeToggle from './ColorSwitcher';
+import FontDropdown from './FontDropdown';
+import { usePathname } from 'next/navigation';
 
 const links = [
   { link: '/create', label: 'Create' },
@@ -27,7 +29,8 @@ const links = [
 export default function HeaderSimple() {
   console.log(classes);
   const [opened, { toggle, close }] = useDisclosure(false);
-  const [active, setActive] = useState();
+  //const [active, setActive] = useState<String>();
+  const active = usePathname()
 
   const items = links.map((link) => (
     <Link
@@ -35,10 +38,10 @@ export default function HeaderSimple() {
       href={link.link}
       className={classes.link}
       data-active={active === link.link || undefined}
-      onClick={(event) => {
-      //   event.preventDefault();
-         setActive(link.link);
-       }} //This captures the input so it just changes the 'active' section, ie. selecting the button
+      // onClick={(event) => {
+      //    //event.preventDefault();
+      //    setActive(link.link);
+      // }} //This captures the input so it just changes the 'active' section, ie. selecting the button
       //    it doesn't _actually_ direct the page, this is good for more 'dynamic' pages where you don't route to a new page
       //    but instead just change the content of the current page
       //    This isn't what you're currently doing
@@ -55,6 +58,7 @@ export default function HeaderSimple() {
         <Group gap={5} visibleFrom="xs">
           {items}
         </Group>
+        <FontDropdown />
         <ThemeToggle />
 
         <Burger

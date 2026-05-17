@@ -1,6 +1,5 @@
 import { Geist, Geist_Mono, Open_Sans, Courier_Prime, Comic_Relief } from "next/font/google";
 import localFont from 'next/font/local'
-import type { AppProps } from 'next/app'
 
 //nextjs default 
 export const geistSans = Geist({
@@ -31,11 +30,29 @@ export const courierPrime = Courier_Prime({
 export const comicRelief = Comic_Relief({
   variable: "--font-comic-relief",
   weight: "400",
-  subsets: ["latin"]
+  subsets: ["latin"],
+  display: "swap",
+  style: "normal"
 })
 
 //open dyslexic
 export const openDyslexic = localFont({
-  src: '../public/OpenDyslexic-Regular.woff2',
+  src: '../../public/OpenDyslexic-Regular.woff2',
 })
 
+
+export const Fonts = {
+  openSans,
+  courierPrime,
+  comicRelief,
+  openDyslexic,
+} as const;
+
+export const FontList = [
+  "openSans", 
+  "courierPrime",
+  "comicRelief",
+  "openDyslexic",
+] as const;
+
+export type TFontList = typeof FontList[number];
