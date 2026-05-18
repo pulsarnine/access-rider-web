@@ -12,9 +12,9 @@ export default function Instructions() {
     return (
         <>
             <div className="p-8">
-                <h1> This page is how to use the website </h1>
+                <h1 className="text-5xl"> This page is how to use the website </h1>
                 <p> It will contain content in an easy read format, including images, on how to use the site </p>
-                <h2>This Website</h2>
+                <h2 className="text-3xl">This Website</h2>
                 <p>The pages on this website are:</p>
                 <p>The 
                 <Link href="/examples">
@@ -52,7 +52,7 @@ export default function Instructions() {
                 </p>
             </div>
             <div className="p-8">
-                <h2>How to use this website</h2>
+                <h2 className="text-3xl">How to use this website</h2>
                 <p>
                     It is recommended that you start on the examples page to consider some sections you may want to include 
                     and the different options for structuring the document. If you have any questions do look at the Learn More 

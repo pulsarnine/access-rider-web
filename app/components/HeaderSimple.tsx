@@ -20,6 +20,7 @@ import FontDropdown from './FontDropdown';
 import { usePathname } from 'next/navigation';
 
 const links = [
+  { link: '/', label: 'Home'},
   { link: '/create', label: 'Create' },
   { link: '/examples', label: 'Examples' },
   { link: '/how-to-use', label: 'How To' },

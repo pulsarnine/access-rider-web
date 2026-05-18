@@ -15,7 +15,7 @@ export default function Explanation() {
         <>
         <FAQSimple />
         <div className="p-8">
-            <h2>
+            <h2 className="text-3xl">
                 In an Emergency
             </h2>
             <p>
@@ -51,7 +51,7 @@ export default function Explanation() {
             specific access requirements.
             </p>
             //insert charities
-            <h2>Further Reading</h2>
+            <h2 className="text-3xl">Further Reading on Access Riders</h2>
             
             <Link className='text-ul' href="https://historicengland.org.uk/advice/inclusion/make-heritage-accessible/access-rider/">
                 <Button variant="filled" color="teal" size="sm">
@@ -64,6 +64,22 @@ export default function Explanation() {
                     Shapearts
                 </Button>
             </Link>
+            <h2 className="text-3xl">
+                For Employers    
+            </h2>     
+            <p>
+                UK Government Reasonable Adjustments Information
+                <br />
+                Your employer, by law, is required to make “reasonable adjustments” to ensure workers with disabilities 
+                or physical or mental health conditions are not substantially disadvantaged when doing their jobs. 
+            </p>
+            <a className='text-ul' 
+                href="https://gov.uk"
+            >
+                <Button variant="filled" color="teal" size="sm">
+                    gov.uk
+                </Button>
+            </a>
             {/* would be cool to make this so that you can search links */}
             <p>
                 Links for many different charities can be found below

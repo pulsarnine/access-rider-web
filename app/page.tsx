@@ -25,16 +25,16 @@ export default function Home() {
     <>
       {/* <SkipLink /> */}
 
-      {/* <FeaturesTitle /> */}
+      <FeaturesTitle />
       <div className="absolute left-1/2 top-1/2 w-52 lg:w-[400px]
       h-52 lg:h[400px] bg-red-500 -translate-x-1/2 -translate-y-1/2 -z-10 
       blur-[150px]">
       </div>
       <div className="p-8 max-w-3xl mx-auto">
-        <h1 className="text-4xl lg:text-6xl font-bold
+        {/* <h1 className="text-4xl lg:text-6xl font-bold
         text-center">
           Welcome to Access Rider Web!
-        </h1>
+        </h1> */}
 
         <ul className="flex items-center justify-center gap-4 mt-10">
           <li>

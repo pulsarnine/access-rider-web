@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-, "app/explanation-page/page.js"  ],
+, "app/explanation-page/page.js", "app/create/Export/Generate-odf.js"  ],
   "exclude": ["node_modules"]
 }
