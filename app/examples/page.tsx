@@ -3,7 +3,10 @@ import Link from 'next/link'
 import { Button } from "@mantine/core";
 import React, { useEffect } from "react";
 import HeaderSimple from '../components/HeaderSimple';
-
+import { PDFViewer } from '@react-pdf/renderer';
+import DisplayRider1 from './rider1display';
+import PdfReactPdf from './rider1display';
+import { createRoot } from 'react-dom/client';
 
 export default function Examples() {
     useEffect ( () => {
@@ -34,6 +37,7 @@ export default function Examples() {
                 <br />
                 The examples below are from their document linked above. 
             </p>
+            {/* <PdfReactPdf /> */}
             <Button>
                 <a href="/Access Rider Example 1.docx" download="Access Rider Example 1">Download Example 1.docx</a>
             </Button>
@@ -59,8 +63,12 @@ export default function Examples() {
             <h2 className="text-3xl">
                 Other Templates
             </h2>
+            <p>
+                This site is just one way of creating and structuring your access rider. If you want to use an alternative 
+                layout or look at different formats for inspiration there are links below from reccomeneded sources for this. 
+            </p>
             <a className='text-ul' 
-                href="https://assets-corporate.channel4.com"
+                href="https://assets-corporate.channel4.com/_flysystem/s3/documents/2021-12/Access%20Rider%20Template_November2021_0.pdf"
             >
                 <Button variant="filled" color="teal" size="sm">
                     Channel 4
@@ -68,16 +76,30 @@ export default function Examples() {
             </a>
             
             <Button>
-                <a href="/Access-Rider-2026-Template.pdf" download="template">Download Template</a>
+                <a href="/Access-Rider-2026-Template.pdf" 
+                download="template"
+                >
+                    Download Template
+                </a>
             </Button>
 
-            <a className='text-ul' 
-                href="https://disabilityarts.online"
+            <a className='text-ul'
+                href="https://disabilityarts.online/magazine/opinion/access-rider-open-template/"
             >
                 <Button variant="filled" color="teal" size="sm">
-                    Disability Arts Online
+                    Disability Arts Online Opinion Article
                 </Button>
             </a>
+
+            <Button>
+                <a href="/Access-Rider-for-Creative-Freelance-Practitioners-Open-Template.docx" 
+                download="Access-Rider-for-Creative-Freelance-Practitioners-Open-Template"
+                >
+                    Disability Arts Open Template
+                </a>
+            </Button>
+
+
             
         </div>
         </>

@@ -62,7 +62,6 @@ const ans6 =
             for more information about your responsibilities and the best ways to support someone.
           </Accordion.Panel> 
         </Accordion.Item>
-{/* need to add a paragraph break for answer4 */}
 
         <Accordion.Item className={classes.item} value="how">
           <Accordion.Control>How do I know if I need an Access Rider?</Accordion.Control>

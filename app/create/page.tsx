@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import Image from 'next/image';
 import ContainedInputs from './ContainedInputs';
-import { List, ThemeIcon } from "@mantine/core";
+import { List, ThemeIcon, Button } from "@mantine/core";
 import { Accessibility } from "@deemlol/next-icons"
 import ThemeSelector from "../components/ColorSwitcher";
 import ThemeToggle from "../components/ColorSwitcher";
@@ -10,7 +10,9 @@ import MyInput from "./section";
 import TaskApp from "./ToDo/ToDo";
 import Component from "./LocalStorageBtn";
 import GenerateDocument from "./Export/BrowserGen"
-import App from "./with-react-pdf/generate-pdf";
+import GeneratePDFViewer from "./with-react-pdf/generate-pdf";
+import DownloadLink from "./with-react-pdf/DownloadLink";
+import Reset from "./with-react-pdf/RefreshBtn";
 
 export default function Create() {
     useEffect ( () => {
@@ -64,7 +66,12 @@ export default function Create() {
         <TaskApp />
         <Component />
         {/* <GenerateDocument /> */}
-        <App />
+        <GeneratePDFViewer />
+        <Reset />
+        <Button>
+          <DownloadLink />
+        </Button>
+
       </>
     )
 }

@@ -6,6 +6,7 @@ import HeaderSimple from "./components/HeaderSimple";
 import { Fonts } from './components/fonts';
 import siteFont from "./components/FontDropdown";
 import { SetFontProvider } from "./components/SetFontProvider";
+import FooterSimple from "./components/FooterSimple";
 
 export const metadata: Metadata = {
   description: "Learn about and Create an Access Rider",
@@ -32,7 +33,7 @@ export default function RootLayout({
 
       <body className={`min-h-full flex flex-col`}>
         <SetFontProvider>
-          <MantineProvider defaultColorScheme="dark"><HeaderSimple />{children}</MantineProvider>
+          <MantineProvider defaultColorScheme="dark"><HeaderSimple />{children}<FooterSimple /></MantineProvider>
         </SetFontProvider>
         {/* <MantineProvider theme={customTheme} defaultColorScheme="dark">{children}</MantineProvider> */}
       </body>

@@ -5,6 +5,8 @@ import Image from "next/image";
 import HeaderSimple from "./components/HeaderSimple"
 import React, { useState, useEffect } from "react";
 import FeaturesTitle from "./homepage/FeaturesTitle";
+import FaqSimple from "./what-is-an-access-rider/FAQSimple";
+import FooterSimple from "./components/FooterSimple";
 //import SkipLink from "./components/SkipLink";
 
 export default function Home() {
@@ -24,7 +26,6 @@ export default function Home() {
   return (
     <>
       {/* <SkipLink /> */}
-
       <FeaturesTitle />
       <div className="absolute left-1/2 top-1/2 w-52 lg:w-[400px]
       h-52 lg:h[400px] bg-red-500 -translate-x-1/2 -translate-y-1/2 -z-10 
@@ -47,9 +48,11 @@ export default function Home() {
           </li>
         </ul>
         <div className="flex flex-col gap-8 mt-10">
+          
           <p style={{
             fontSize: size,
           }}>
+
             Lorem ipsum dolor sit amet consectetur, 
             adipisicing elit. Mollitia doloremque ducimus 
             harum enim. Aut temporibus ullam sunt id error nulla.
@@ -63,14 +66,13 @@ export default function Home() {
             ratione minus nisi, ea, fuga facilis aliquid veniam 
             recusandae autem modi.
           </p>
-        </div>
-      </div>
-      <div className="flex justify-center" >
-        <p>
-          This website is a tool to create Access Riders, teach people more about them and raise awareness of their uses. 
-        </p>
-      </div>
-    
+          <p style={{
+              fontSize: size,
+            }}>
+            This website is a tool to create Access Riders, teach people more about them and raise awareness of their uses. 
+          </p>
+        </div>  
+      </div>    
     </>
   )
 }

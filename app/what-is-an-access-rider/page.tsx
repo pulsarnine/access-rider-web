@@ -5,6 +5,7 @@ import React, { useEffect } from "react";
 import HeaderSimple from '../components/HeaderSimple';
 import FAQSimple from './FAQSimple';
 import Head from 'next/head';
+import YouTubeEmbed from './EmbedYoutube';
 
 
 export default function Explanation() {
@@ -45,6 +46,7 @@ export default function Explanation() {
                     emergency contacts. 
                 </List.Item>
             </List>  
+            <YouTubeEmbed />
             
             <p>
             It is also worth noting down some of these charities who may be able to provide further support or reading for 

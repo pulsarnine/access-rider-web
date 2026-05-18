@@ -2,6 +2,7 @@
 
 import { Dispatch, type ReactNode, SetStateAction, createContext, useContext, useState } from "react";
 import { Fonts, TFontList } from './fonts';
+import { useLocalStorage } from "usehooks-ts";
 
 // Creates context that initialises as null
 export const SetFontContext = createContext<TSetFont>(

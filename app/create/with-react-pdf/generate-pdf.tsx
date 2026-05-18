@@ -4,7 +4,7 @@ import MyPDF from "./MyPDF";
 import ReactDOM from 'react-dom';
 
 
-const App = () => {
+const GeneratePDFViewer = () => {
   return (
     <div>
       <PDFViewer style={{ width: '100%', height: '500px' }}>
@@ -14,6 +14,6 @@ const App = () => {
   );
 };
 
-// ReactDOM.render(<App />, document.getElementById('root'));
+// ReactDOM.render(<GeneratePDFViewer />, document.getElementById('root'));
 
-export default App;
+export default GeneratePDFViewer;
