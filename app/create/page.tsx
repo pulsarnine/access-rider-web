@@ -25,7 +25,7 @@ export default function Create() {
             from it. 
           </p>
         </div>
-        <div className="p-10px">
+        <div className="p-8">
           <List 
             type="ordered"
             center
@@ -35,6 +35,7 @@ export default function Create() {
               </ThemeIcon>
             }
           >  
+          
             <List.Item>
               Enter your information in the sections below
             </List.Item>
@@ -47,13 +48,17 @@ export default function Create() {
             </List.Item>
           </List>
         </div>
+        <div className="p-8">
         <Image
           src="/frogg.jpg"
           width={500}
           height={500}
           alt="Picture of a green frog"
         />
+        </div>
+        <div className="p-8">
         <UserInput />
+        </div>
         {/* <GenerateDocument /> */}
         <GeneratePDFViewer />
         <Reset />

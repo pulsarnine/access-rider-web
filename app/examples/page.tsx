@@ -2,7 +2,6 @@
 import Link from 'next/link'
 import { Button } from "@mantine/core";
 import React, { useEffect } from "react";
-import HeaderSimple from '../components/HeaderSimple';
 import { PDFViewer } from '@react-pdf/renderer';
 import DisplayRider1 from './rider1display';
 import PdfReactPdf from './rider1display';
@@ -30,7 +29,9 @@ export default function Examples() {
                 <br />
                 The examples below are from their document linked here: 
             </p>
-            <a className='text-ul' 
+            <a 
+                className='text-ul' 
+                target="_blank"
                 href="https://weareunlimited.org.uk/resource/creating-your-own-access-rider/"
             >
                 <Button variant="filled" color="teal" size="sm">
@@ -46,7 +47,7 @@ export default function Examples() {
             </p>
             <br />
             {/* <PdfReactPdf /> */}
-                <a href="/Access Rider Example 1.docx" download="Access Rider Example 1">
+                <a href="access-rider-docs/Access Rider Example 1.docx" download="Access Rider Example 1">
                 <Button>
                 Download Example 1.docx
                 </Button>
@@ -88,7 +89,9 @@ export default function Examples() {
                 This site is just one way of creating and structuring your access rider. If you want to use an alternative 
                 layout or look at different formats for inspiration there are links below from reccomeneded sources for this. 
             </p>
-            <a className='text-ul' 
+            <a 
+                className='text-ul' 
+                target="_blank"
                 href="https://assets-corporate.channel4.com/_flysystem/s3/documents/2021-12/Access%20Rider%20Template_November2021_0.pdf"
             >
                 <Button variant="filled" color="teal" size="sm">
@@ -112,7 +115,9 @@ export default function Examples() {
             <p>
                 The following links are from disability arts and there is an article and download document.
             </p>
-            <a className='text-ul'
+            <a 
+                className='text-ul'
+                target="_blank"
                 href="https://disabilityarts.online/magazine/opinion/access-rider-open-template/"
             >
                 <Button variant="filled" color="teal" size="sm">

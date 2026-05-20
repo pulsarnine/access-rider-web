@@ -4,6 +4,8 @@ import { Button, List } from "@mantine/core";
 import Head from "next/head";
 import React, { useEffect } from "react";
 import HeaderSimple from '../components/HeaderSimple';
+import Image from 'next/image';
+import Grid from '../learn-more/grid';
 
 export default function Instructions() {
     useEffect ( () => {
@@ -12,8 +14,6 @@ export default function Instructions() {
     return (
         <>
             <div className="p-8">
-                <h1 className="text-5xl"> This page is how to use the website </h1>
-                <p> It will contain content in an easy read format, including images, on how to use the site </p>
                 <h2 className="text-3xl">This Website</h2>
                 <p>The pages on this website are:</p>
                 <p>The 
@@ -51,34 +51,210 @@ export default function Instructions() {
                 when they are sent one to look at.
                 </p>
             </div>
+
             <div className="p-8">
-                <h2 className="text-3xl">How to use this website</h2>
-                <p>
-                    It is recommended that you start on the examples page to consider some sections you may want to include 
-                    and the different options for structuring the document. If you have any questions do look at the Learn More 
-                    Page for some FAQs or other links. 
-                </p>
-                <h3>Using the create page</h3>
-                <List type="ordered">
-                    <List.Item>
-                        Choose a section from the suggested drop downs, or create your own – add custom sections as you like 
-                        and you can remove others. 
-                    </List.Item>
-                    <List.Item>
-                        Fill in your information for that section, you can come back and edit this later. You could also do 
-                        this in bullet points if you wish.
-                    </List.Item>
-                    <List.Item>
-                        The input you give saves to your device automatically and means you can access it later. 
-                    </List.Item>
-                    <List.Item>
-                        Once you are happy you have included all the sections you want, press the final download 
-                        button to export your document in a selected format. The default is an PDF but you can change this 
-                        to be Word or others. 
-                        {/* (Bear in mind that a PDF can be difficult to work with screen readers so often 
-                        the OpenDoc choice is the most accessible format.)  */}
-                    </List.Item>
-                </List>
+                {/* Easy read how to instructions */}
+                <h2 className="text-5xl">How to use this website</h2>
+                <br />
+
+                <Grid columns="repeat(auto-fit, minmax(200px, 1fr))" gap="1rem">
+                    <Image src="/ER-examples.png"
+                            alt = "icon of blue pages with text lines and e.g"
+                                    width = {160}
+                                    height = {80}
+                    />
+                    <p></p>
+                    <p className="text-3xl">
+                        You should start on the examples page. 
+                    </p>
+                </Grid>
+                <br />
+
+
+                <Grid columns="repeat(auto-fit, minmax(200px, 1fr))" gap="1rem">
+                    <Image src="/ER-template.jpg"
+                            alt = "icon of empty boxes and text lines on a document"
+                                    width = {160}
+                                    height = {80}
+                    />
+                    <p></p>
+                    <p className="text-3xl">
+                        You can see templates to make an access rider there. 
+                    </p>
+                </Grid>
+                <br />
+
+                <Grid columns="repeat(auto-fit, minmax(200px, 1fr))" gap="1rem">
+                    <Image src="/ER-question.png"
+                            alt = "Confused face with thought bubble with question mark inside"
+                                    width = {160}
+                                    height = {80}
+                    />
+                    <p></p>
+                    <p className="text-3xl">
+                        If you have questions look at the Learn More page. 
+                    </p>
+                </Grid>
+                <br />
+
+                <Grid columns="repeat(auto-fit, minmax(200px, 1fr))" gap="1rem">
+                    <Image src="/ER-faq.jpg"
+                            alt = "icon of two speech bubbles, one with question mark"
+                                    width = {160}
+                                    height = {80}
+                    />
+                    <p></p>
+                    <p className="text-3xl">
+                        It has Frequently Asked Questions (FAQs) and more links.
+                    </p>
+                </Grid>
+                
+                <br />
+                <br />            
+                <h3 className="text-3xl">The Create Page</h3>
+                <br />
+                
+                <Grid columns="repeat(auto-fit, minmax(200px, 1fr))" gap="1rem">
+                    <Image src="/ER-form.png"
+                            alt = "Piece of paper with varying sizes of empty boxes on right hand side"
+                                    width = {160}
+                                    height = {80}
+                    />
+                    <Image src="/ER-typing.png"
+                            alt = "hands on computer keyboard icon"
+                                    width = {160}
+                                    height = {80}
+                    />
+                    <p className="text-3xl">
+                        Enter your information in the form.
+                    </p>
+                </Grid>
+                <br />
+
+                <Grid columns="repeat(auto-fit, minmax(200px, 1fr))" gap="1rem">
+                    <Image src="/ER-personal3.png"
+                            alt = "Icon of blue form with person outline in top left corner and text lines on right side"
+                                    width = {160}
+                                    height = {80}
+                    />
+                    <Image src="/ER-typing.png"
+                            alt = "hands on computer keyboard icon"
+                                    width = {160}
+                                    height = {80}
+                    />
+                    <p className="text-3xl">
+                        Enter your personal details.
+                    </p>
+                </Grid>
+                <br />
+
+                <Grid columns="repeat(auto-fit, minmax(200px, 1fr))" gap="1rem">
+                    <Image src="/ER-accessibility.png"
+                            alt = "stick person in circle with arms out, the accessibility symbol"
+                                    width = {160}
+                                    height = {80}
+                    />
+                    <Image src="/ER-typing.png"
+                            alt = "hands on computer keyboard icon"
+                                    width = {160}
+                                    height = {80}
+                    />
+                    <p className="text-3xl">
+                        Enter information about your access needs.
+                    </p>
+                </Grid>
+                <br />
+                
+                <Grid columns="repeat(auto-fit, minmax(200px, 1fr))" gap="1rem">
+                    <Image src="/ER-edit.jpg"
+                            alt = "Icon of pen in a box to symbolise editing"
+                                    width = {160}
+                                    height = {80}
+                    />
+                    <p></p>
+                    <p className="text-3xl">
+                        You can edit this later because it is saved on your device.
+                    </p>
+                </Grid>
+                <br />
+
+                <Grid columns="repeat(auto-fit, minmax(200px, 1fr))" gap="1rem">
+                    <Image src="/ER-done.svg"
+                            alt = "Green box with tick"
+                                    width = {160}
+                                    height = {80}
+                    />
+                    <Image src="/ER-click.jpg"
+                            alt = "icon of mouse click in box"
+                                    width = {160}
+                                    height = {80}
+                    />
+                    <p className="text-3xl">
+                        When you have finished click the "reload page" button.
+                    </p>
+                </Grid>
+                <br />
+
+                <Grid columns="repeat(auto-fit, minmax(200px, 1fr))" gap="1rem">
+                    <Image src="/ER-click.jpg"
+                            alt = "icon of mouse click in box"
+                                    width = {160}
+                                    height = {80}
+                    />
+                    <p></p>
+                    <p className="text-3xl">
+                        After this click the "download now" button. 
+                    </p>
+                </Grid>
+                <br />
+
+                <Grid columns="repeat(auto-fit, minmax(200px, 1fr))" gap="1rem">
+                    <Image src="/ER-download.png"
+                            alt = "Download document icon"
+                                    width = {160}
+                                    height = {80}
+                    />
+                    <p></p>
+                    <p className="text-3xl">
+                        This downloads your access rider. 
+                    </p>
+                </Grid>
+                <br />
+
+                <Grid columns="repeat(auto-fit, minmax(200px, 1fr))" gap="1rem">
+                    <Image src="/ER-downloadpdf.png"
+                            alt = "PDF document icon"
+                                    width = {160}
+                                    height = {80}
+                    />
+                    <p></p>
+                    <p className="text-3xl">
+                        It downloads as a <strong>PDF</strong>. {/* make pdf bold */}
+                    </p>
+                </Grid>
+
+                <br />
+                    <p className="text-3xl">
+                        <strong>PDF</strong>: A PDF is a digital document format with standard text and image formatting.
+                    </p>
+                <br />
+                
+
+                <Grid columns="repeat(auto-fit, minmax(200px, 1fr))" gap="1rem">
+                    <Image src="/ER-filetype.jpg"
+                            alt = "icon of three documents stacked on each other"
+                                    width = {160}
+                                    height = {80}
+                    />
+                    <p></p>
+                    <p className="text-3xl">
+                        You can choose another file type if you like.
+                    </p>
+                </Grid>
+
+                
+                {/* (Bear in mind that a PDF can be difficult to work with screen readers so often 
+                    the OpenDoc choice is the most accessible format.)  */}
             </div>
         </>
     )

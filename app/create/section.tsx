@@ -35,8 +35,10 @@ export default function UserInput() {
     {/* all of the input dropdowns */}
 
     {/* name */}
-    <h1 className="text-3xl">Your Details</h1>
+    <h1 className="text-4xl">Your Details</h1>
+    <br />
       <TextInput
+      size = "lg"
       value={name}
       onChange={(event) => setName(event.currentTarget.value)}
       label="Name"
@@ -45,6 +47,7 @@ export default function UserInput() {
       placeholder="John Smith"
       />
       <TextInput
+      size = "lg"
       value={pronouns}
       onChange={(event) => setPronouns(event.currentTarget.value)}
       label="Pronouns"
@@ -52,6 +55,7 @@ export default function UserInput() {
       placeholder="they/them"
       />
       <TextInput
+      size = "lg"
       value={phone}
       onChange={(event) => setPhone(event.currentTarget.value)}
       label="Mobile Number"
@@ -59,6 +63,7 @@ export default function UserInput() {
       placeholder="07700 900843"
       />
       <TextInput
+      size = "lg"
       value={email}
       onChange={(event) => setEmail(event.currentTarget.value)}
       label="Email"
@@ -68,8 +73,11 @@ export default function UserInput() {
 
       {/* support name */}
     <br />
-    <h1 className="text-3xl">Your Support Worker's Details</h1>
+    <br />
+    <h1 className="text-4xl">Your Support Worker's Details</h1>
+    <br />
       <TextInput
+      size = "lg"
       value={supportName}
       onChange={(event) => setSupportName(event.currentTarget.value)}
       label="Support Worker's Name"
@@ -77,6 +85,7 @@ export default function UserInput() {
       placeholder="Jane Doe"
       />
       <TextInput
+      size = "lg"
       value={supportPronouns}
       onChange={(event) => setSupportPronouns(event.currentTarget.value)}
       label="Support Worker's Pronouns"
@@ -84,6 +93,7 @@ export default function UserInput() {
       placeholder="they/them"
       />
       <TextInput
+      size = "lg"
       value={supportPhone}
       onChange={(event) => setSupportPhone(event.currentTarget.value)}
       label="Support Worker's Mobile Number"
@@ -91,6 +101,7 @@ export default function UserInput() {
       placeholder="07700 900243"
       />
       <TextInput
+      size = "lg"
       value={supportEmail}
       onChange={(event) => setSupportEmail(event.currentTarget.value)}
       label="Support Worker's Email"
@@ -99,9 +110,12 @@ export default function UserInput() {
       />
 
     <br />
-    <h1 className="text-3xl">Main Content</h1>  
+    <br />
+    <h1 className="text-4xl">Main Content</h1>  
+    <br />
       {/* personal intro */}
       <TextInput
+      size = "lg"
       component="textarea" multiline
       value={shortIntro}
       onChange={(event) => setShortIntro(event.currentTarget.value)}
@@ -116,9 +130,11 @@ export default function UserInput() {
       <br />
         You could include a visual description of yourself.
       </p>
+      <br />
 
       {/* day to day */}
       <TextInput
+      size = "lg"
       component="textarea" multiline
       value={dayToDay}
       onChange={(event) => setDayToDay(event.currentTarget.value)}
@@ -129,6 +145,7 @@ export default function UserInput() {
 
       {/* travel  */}
       <TextInput
+      size = "lg"
       component="textarea" multiline
       value={travel}
       onChange={(event) => setTravel(event.currentTarget.value)}
@@ -141,9 +158,11 @@ export default function UserInput() {
         <br />
         Travel away including: beaks after travel away, international travel and accommodation – whether you need a support worker, access requirements for accommodation.
       </p>
+      <br />
 
       {/* working hours */}
       <TextInput
+      size = "lg"
       component="textarea" multiline
       value={workingHours}
       onChange={(event) => setWorkingHours(event.currentTarget.value)}
@@ -154,6 +173,7 @@ export default function UserInput() {
       
       {/* location */}
       <TextInput
+      size = "lg"
       component="textarea" multiline
       value={location}
       onChange={(event) => setLocation(event.currentTarget.value)}
@@ -164,6 +184,7 @@ export default function UserInput() {
 
       {/* communications */}
       <TextInput
+      size = "lg"
       component="textarea" multiline
       value={comms}
       onChange={(event) => setComms(event.currentTarget.value)}
@@ -174,6 +195,7 @@ export default function UserInput() {
 
       {/* flare ups */}
       <TextInput
+      size = "lg"
       component="textarea" multiline
       value={flare}
       onChange={(event) => setFlare(event.currentTarget.value)}
@@ -182,9 +204,12 @@ export default function UserInput() {
       placeholder="I know when an episode is coming and can anticipate it. I get more flare ups towards the end of the day so need more support then."
       />
     <br />
+    <br />
     <h1 className="text-3xl">Your Emergency Contact's Details</h1>
+    <br />
       {/* emergency contact */}
       <TextInput
+      size = "lg"
       value={emergencyName}
       onChange={(event) => setEmergencyName(event.currentTarget.value)}
       label="Emergency Contact's Name"
@@ -192,6 +217,7 @@ export default function UserInput() {
       placeholder="Chris Finch"
       />
       <TextInput
+      size = "lg"
       value={emergencyPronouns}
       onChange={(event) => setEmergencyPronouns(event.currentTarget.value)}
       label="Emergency Contact's Pronouns"
@@ -199,6 +225,7 @@ export default function UserInput() {
       placeholder="they/them"
       />
       <TextInput
+      size = "lg"
       value={emergencyPhone}
       onChange={(event) => setEmergencyPhone(event.currentTarget.value)}
       label="Emergency Contact's Mobile Number"
@@ -206,6 +233,7 @@ export default function UserInput() {
       placeholder="07700 900985"
       />
       <TextInput
+      size = "lg"
       value={emergencyEmail}
       onChange={(event) => setEmergencyEmail(event.currentTarget.value)}
       label="Emergency Contact's Email"
@@ -213,9 +241,12 @@ export default function UserInput() {
       placeholder="your.name@gmail.com"
       />
     <br />
+    <br />
     <h1 className="text-3xl">Additional Information</h1>
+    <br />
       {/* other information */}
       <TextInput
+      size = "lg"
       component="textarea" multiline 
       value={otherInfo}
       onChange={(event) => setOtherInfo(event.currentTarget.value)}
@@ -226,6 +257,7 @@ export default function UserInput() {
 
       {/* supporting information */}
       <TextInput
+      size = "lg"
       component="textarea" multiline
       value={supportingInfo}
       onChange={(event) => setSupportingInfo(event.currentTarget.value)}
@@ -234,7 +266,9 @@ export default function UserInput() {
       placeholder="You may want to link additional resources"
       />
     <br />
+    <br />
     <h1 className="text-3xl">Sharing Notice</h1>
+    <br />
       {/* selection for two types of sharing info  */}
       {/* doesnt work */}
       {/* <Select 
