@@ -24,7 +24,7 @@ const links = [
   { link: '/create', label: 'Create' },
   { link: '/examples', label: 'Examples' },
   { link: '/how-to-use', label: 'How To' },
-  { link: '/what-is-an-access-rider', label: 'Learn More' },
+  { link: '/learn-more', label: 'Learn More' },
 ];
 
 export default function HeaderSimple() {

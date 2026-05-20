@@ -1,15 +1,11 @@
 'use client'
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import Image from 'next/image';
-import ContainedInputs from './ContainedInputs';
 import { List, ThemeIcon, Button } from "@mantine/core";
 import { Accessibility } from "@deemlol/next-icons"
-import ThemeSelector from "../components/ColorSwitcher";
-import ThemeToggle from "../components/ColorSwitcher";
-import MyInput from "./section";
-import TaskApp from "./ToDo/ToDo";
-import Component from "./LocalStorageBtn";
-import GenerateDocument from "./Export/BrowserGen"
+// import ThemeSelector from "../components/ColorSwitcher";
+// import ThemeToggle from "../components/ColorSwitcher";
+import UserInput from "./section";
 import GeneratePDFViewer from "./with-react-pdf/generate-pdf";
 import DownloadLink from "./with-react-pdf/DownloadLink";
 import Reset from "./with-react-pdf/RefreshBtn";
@@ -40,18 +36,14 @@ export default function Create() {
             }
           >  
             <List.Item>
-              Choose a section from the drop down, or create your own
+              Enter your information in the sections below
             </List.Item>
             <List.Item>
-              Fill In your information for that section, you can come back and edit this later. You could also do this 
-              in bullet points if you wish.
+              You can come back and edit this later. You could also do this in bullet points if you wish.
             </List.Item>
             <List.Item>
-              Save the section when you are happy with the content you’ve put in            
-            </List.Item>
-            <List.Item>
-              Once you are happy you have included all the sections you want, press the final compile and export button to 
-              export your document in a selected format. The default is an Open Doc.
+              Once you are happy you have included all the sections you want, press the final download button to 
+              export your document as a .pdf file.
             </List.Item>
           </List>
         </div>
@@ -61,23 +53,16 @@ export default function Create() {
           height={500}
           alt="Picture of a green frog"
         />
-        <MyInput />
-        <ContainedInputs />
-        <TaskApp />
-        <Component />
+        <UserInput />
         {/* <GenerateDocument /> */}
         <GeneratePDFViewer />
         <Reset />
         <Button>
           <DownloadLink />
         </Button>
-
       </>
     )
 }
-
-
-
 
 // this page needs: 
 // title and subheading 

@@ -11,6 +11,7 @@ const features = [
     icon: Edit,
     title: 'Create',
     description: 'The Create page is for making the access rider, with suggested sections and the option to add your own, it is fully customisable and gives you the ability to export your document for further editing and sharing.',
+    link: "/create"
   },
   {
     icon: BookOpen,
@@ -48,6 +49,8 @@ export default function FeaturesTitle() {
       <Text c="dimmed" fz="sm">
         {feature.description}
       </Text>
+      {/* <Link href={feature.link}>
+      </Link> */}
     </div>
   ));
 

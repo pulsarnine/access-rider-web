@@ -5,7 +5,7 @@ import Image from "next/image";
 import HeaderSimple from "./components/HeaderSimple"
 import React, { useState, useEffect } from "react";
 import FeaturesTitle from "./homepage/FeaturesTitle";
-import FaqSimple from "./what-is-an-access-rider/FAQSimple";
+import FaqSimple from "./learn-more/FAQSimple";
 import FooterSimple from "./components/FooterSimple";
 //import SkipLink from "./components/SkipLink";
 

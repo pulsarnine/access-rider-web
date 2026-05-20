@@ -6,6 +6,7 @@ import HeaderSimple from '../components/HeaderSimple';
 import FAQSimple from './FAQSimple';
 import Head from 'next/head';
 import YouTubeEmbed from './EmbedYoutube';
+import CharityLinks from './charityLinks';
 
 
 export default function Explanation() {
@@ -15,7 +16,7 @@ export default function Explanation() {
     return (
         <>
         <FAQSimple />
-        <div className="p-8">
+        <div className="p-10 py-10">
             <h2 className="text-3xl">
                 In an Emergency
             </h2>
@@ -26,7 +27,7 @@ export default function Explanation() {
                     nhs.uk
                 </a>
             </p>
-            <List type="ordered" listStyleType="disc" start={1}>
+            <List type="ordered" listStyleType="number" start={1}>
                 <List.Item>
                     Check there is no further danger to yourself or the individual.
                 </List.Item>
@@ -46,26 +47,35 @@ export default function Explanation() {
                     emergency contacts. 
                 </List.Item>
             </List>  
+        </div>    
+        <div className="p-10 py-10 ps-20 pe-20">
             <YouTubeEmbed />
-            
-            <p>
-            It is also worth noting down some of these charities who may be able to provide further support or reading for 
-            specific access requirements.
-            </p>
-            //insert charities
+        </div>
+        <div className="p-10 py-10">
             <h2 className="text-3xl">Further Reading on Access Riders</h2>
-            
+
             <Link className='text-ul' href="https://historicengland.org.uk/advice/inclusion/make-heritage-accessible/access-rider/">
                 <Button variant="filled" color="teal" size="sm">
                     Historic England
                 </Button>
             </Link>
+            <p>
+                While some of this sites information is specific to heritage sites, a lot is transferrable to many industries. 
+                There is information about access riders and how to make them as well as reccomendations for supporting and offering 
+                access riders. 
+            </p>
+            
             <br />
             <Link className='text-ul' href="https://www.shapearts.org.uk/News/access-docs-for-artists-resource/">
                 <Button variant="filled" color="teal" size="sm">
                     Shapearts
                 </Button>
             </Link>
+            <p>
+                This site provides information about how to write an access rider and FAQs, as well as an alternative document template.
+            </p>
+        </div>    
+        <div className="p-10 py-10">
             <h2 className="text-3xl">
                 For Employers    
             </h2>     
@@ -83,10 +93,14 @@ export default function Explanation() {
                 </Button>
             </a>
             {/* would be cool to make this so that you can search links */}
+            </div>
+            <div className="p-10 py-10">
             <p>
-                Links for many different charities can be found below
+                It is also worth noting down some of these charities who may be able to provide further support or reading 
+                for specific access requirements. Links for many different charities can be found below:
             </p>
-        </div>
+            <CharityLinks />
+            </div>
         </>
     )
 }   

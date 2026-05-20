@@ -42,7 +42,7 @@ export default function Instructions() {
                 page is this page. It teaches you how to use the website.
                 <br /> 
                 The 
-                <Link href="/what-is-an-access-rider">
+                <Link href="/learn-more">
                     <Button variant="filled" color="teal" size="sm">
                     Learn More
                     </Button>
@@ -65,19 +65,18 @@ export default function Instructions() {
                         and you can remove others. 
                     </List.Item>
                     <List.Item>
-                        Fill In your information for that section, you can come back and edit this later. You could also do 
+                        Fill in your information for that section, you can come back and edit this later. You could also do 
                         this in bullet points if you wish.
                     </List.Item>
                     <List.Item>
-                        Save the section when you are happy with the content you’ve put in. This saves it to your device and 
-                        means you can access it later. Be careful with reloading the page before saving as otherwise the text 
-                        you have put in will not be saved!
+                        The input you give saves to your device automatically and means you can access it later. 
                     </List.Item>
                     <List.Item>
-                        Once you are happy you have included all the sections you want, press the final compile and export 
-                        button to export your document in a selected format. The default is an Open Doc but you can change this 
-                        to be PDF, Word or others. (Bear in mind that a PDF can be difficult to work with screen readers so often 
-                        the OpenDoc choice is the most accessible format.) 
+                        Once you are happy you have included all the sections you want, press the final download 
+                        button to export your document in a selected format. The default is an PDF but you can change this 
+                        to be Word or others. 
+                        {/* (Bear in mind that a PDF can be difficult to work with screen readers so often 
+                        the OpenDoc choice is the most accessible format.)  */}
                     </List.Item>
                 </List>
             </div>

@@ -14,9 +14,9 @@ export default function Examples() {
     }, []);
     return(
         <>
-        <div className="p-8">
+        <div className="p-8 py-10">
             <p>
-                Access riders can come in many forms, both more detailed or concise, whichever will best suit your needs and 
+                Access riders can come in many forms, both more detailed or more concise, whichever will best suit your needs and 
                 communication preferences. Depending on the industry that you work in, you may need to include different parts or 
                 have different key access needs you wish to communicate. 
                 <br />
@@ -24,7 +24,12 @@ export default function Examples() {
                 future reference. There are further links at the bottom of the page if you wish to do further research.
                 <br />
             </p>
-            
+            <br />
+            <p>
+                The Unlimited website is a good starting point for research about the process of creating your access rider
+                <br />
+                The examples below are from their document linked here: 
+            </p>
             <a className='text-ul' 
                 href="https://weareunlimited.org.uk/resource/creating-your-own-access-rider/"
             >
@@ -32,34 +37,50 @@ export default function Examples() {
                     Unlimited
                 </Button>
             </a>
+            <br />
+            <br />
             <p>
-                The Unlimited website is a good starting point for research about the process of creating your access rider
-                <br />
-                The examples below are from their document linked above. 
+                The first example is an access rider for a performance artist. It is shorter, just a page long and contains 
+                fewer sections. It consicely details access needs, emergency contact information and provides a link for more
+                information about Lupus, the individual's condition. 
             </p>
+            <br />
             {/* <PdfReactPdf /> */}
-            <Button>
-                <a href="/Access Rider Example 1.docx" download="Access Rider Example 1">Download Example 1.docx</a>
-            </Button>
+                <a href="/Access Rider Example 1.docx" download="Access Rider Example 1">
+                <Button>
+                Download Example 1.docx
+                </Button>
+                </a>
             <br />
             <br />
-            <Button>
-                <a href="/Access Rider Example 1.pdf" download="Access Rider Example 1">Download Example 1.pdf</a>
-            </Button>
+            <a href="/Access Rider Example 1.pdf" download="Access Rider Example 1">
+                <Button>
+                    Download Example 1.pdf 
+                </Button>
+            </a>
             <br />
             <br />
+            <p>
+                The second example is an access rider for a theatre and visual arts artist. This document is longer, five pages.
+                It is comprehensive in the paragraphs writtern and includes more written in the personal section. It provides a visual 
+                description and some links to eqiuipment that would be useful to have. 
+            </p>
             <br />
-            <Button>
-                <a href="/Access Rider Example 2.docx" download="Access Rider Example 2">Download Example 2.docx</a>
-            </Button>
+                <a href="/Access Rider Example 2.docx" download="Access Rider Example 2">
+                <Button>
+                    Download Example 2.docx
+                </Button>
+                </a>
             <br />
             <br />
-            <Button>
-                <a href="/Access Rider Example 2.pdf" download="Access Rider Example 2">Download Example 2.pdf</a>
-            </Button>
+            <a href="/Access Rider Example 2.pdf" download="Access Rider Example 2">
+                <Button>
+                    Download Example 2.pdf
+                </Button>
+            </a>
 
-
-            
+        </div>
+        <div className="p-8 py-10">
             <h2 className="text-3xl">
                 Other Templates
             </h2>
@@ -74,15 +95,23 @@ export default function Examples() {
                     Channel 4
                 </Button>
             </a>
-            
-            <Button>
-                <a href="/Access-Rider-2026-Template.pdf" 
-                download="template"
-                >
-                    Download Template
-                </a>
-            </Button>
-
+            <p>
+                A template from Channel 4 with example sections. (Downloads in .pdf format)
+            </p>
+            <a href="/Access-Rider-2026-Template.pdf" 
+            download="template"
+            >
+                <Button>
+                    Download MU Template
+                </Button>
+            </a>
+            <p>
+                A template from the Musicians Union (Downloads in editable .pdf format, with link 
+                at bottom to download alternative formats)
+            </p>
+            <p>
+                The following links are from disability arts and there is an article and download document.
+            </p>
             <a className='text-ul'
                 href="https://disabilityarts.online/magazine/opinion/access-rider-open-template/"
             >
@@ -90,14 +119,13 @@ export default function Examples() {
                     Disability Arts Online Opinion Article
                 </Button>
             </a>
-
-            <Button>
-                <a href="/Access-Rider-for-Creative-Freelance-Practitioners-Open-Template.docx" 
+            <a href="/Access-Rider-for-Creative-Freelance-Practitioners-Open-Template.docx" 
                 download="Access-Rider-for-Creative-Freelance-Practitioners-Open-Template"
-                >
+            >
+                <Button>
                     Disability Arts Open Template
-                </a>
-            </Button>
+                </Button>
+            </a>
 
 
             
