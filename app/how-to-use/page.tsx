@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import { Button, List } from "@mantine/core";
 import Head from "next/head";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import HeaderSimple from '../components/HeaderSimple';
 import Image from 'next/image';
 import Grid from '../learn-more/grid';
@@ -11,12 +11,55 @@ export default function Instructions() {
     useEffect ( () => {
         document.title = "Access Rider ┃ How To Use";
     }, []);
+    const [size, setSize] = useState(26);
+      
+      if (size < 16) {
+        setSize(16);
+      } 
+      if (size > 72) {
+        setSize(72);
+      }
+
     return (
         <>
+        {/* size change buttons */}
+        <p className="flex items-center justify-center">Change Fontsize:</p>
+        <ul className="flex items-center justify-center gap-4 mt-10">
+          <li>
+            <Button 
+                onClick={() => setSize(size - 4)} 
+                className="py-2 px-6 rounded shadow bg-[#333333] 
+                text-white hover:bg-[#222222]"
+            >
+            Decrease
+            </Button>
+          </li>
+          <li>
+            <Button 
+                onClick={() => setSize(size + 4)}
+                className="py-2 px-6 rounded shadow bg-[#333333] 
+                text-white hover:bg-[#222222]"
+            >
+            Increase
+            </Button>
+          </li>
+        </ul>
+
+        {/* Page intro */}
             <div className="p-8">
-                <h2 className="text-3xl">This Website</h2>
-                <p>The pages on this website are:</p>
-                <p>The 
+                <p style={{
+                    fontSize: size+4,
+                    }}>
+                    This Website</p>
+                <p style={{
+                    fontSize: size-8,
+                    }}>
+                The pages on this website are:
+                </p>
+                <p style={{
+                    fontSize: size-8,
+                    }}>
+                The 
                 <Link href="/examples">
                     <Button variant="filled" color="teal" size="sm">
                     Examples
@@ -52,9 +95,13 @@ export default function Instructions() {
                 </p>
             </div>
 
+            {/* Easy read how to instructions */}
             <div className="p-8">
-                {/* Easy read how to instructions */}
-                <h2 className="text-5xl">How to use this website</h2>
+                <p style={{
+                    fontSize: size+12,
+                    }}>
+                        How to use this website
+                </p>
                 <br />
 
                 <Grid columns="repeat(auto-fit, minmax(200px, 1fr))" gap="1rem">
@@ -64,7 +111,9 @@ export default function Instructions() {
                                     height = {80}
                     />
                     <p></p>
-                    <p className="text-3xl">
+                    <p style={{
+                    fontSize: size,
+                    }}>
                         You should start on the examples page. 
                     </p>
                 </Grid>
@@ -78,7 +127,9 @@ export default function Instructions() {
                                     height = {80}
                     />
                     <p></p>
-                    <p className="text-3xl">
+                    <p style={{
+                    fontSize: size,
+                    }}>
                         You can see templates to make an access rider there. 
                     </p>
                 </Grid>
@@ -91,7 +142,9 @@ export default function Instructions() {
                                     height = {80}
                     />
                     <p></p>
-                    <p className="text-3xl">
+                    <p style={{
+                    fontSize: size,
+                    }}>
                         If you have questions look at the Learn More page. 
                     </p>
                 </Grid>
@@ -104,14 +157,20 @@ export default function Instructions() {
                                     height = {80}
                     />
                     <p></p>
-                    <p className="text-3xl">
+                    <p style={{
+                    fontSize: size,
+                    }}>
                         It has Frequently Asked Questions (FAQs) and more links.
                     </p>
                 </Grid>
                 
                 <br />
                 <br />            
-                <h3 className="text-3xl">The Create Page</h3>
+                <p style={{
+                    fontSize: size+4,
+                    }}>
+                        The Create Page
+                    </p>
                 <br />
                 
                 <Grid columns="repeat(auto-fit, minmax(200px, 1fr))" gap="1rem">
@@ -125,7 +184,9 @@ export default function Instructions() {
                                     width = {160}
                                     height = {80}
                     />
-                    <p className="text-3xl">
+                    <p style={{
+                    fontSize: size,
+                    }}>
                         Enter your information in the form.
                     </p>
                 </Grid>
@@ -142,7 +203,9 @@ export default function Instructions() {
                                     width = {160}
                                     height = {80}
                     />
-                    <p className="text-3xl">
+                    <p style={{
+                    fontSize: size,
+                    }}>
                         Enter your personal details.
                     </p>
                 </Grid>
@@ -159,7 +222,9 @@ export default function Instructions() {
                                     width = {160}
                                     height = {80}
                     />
-                    <p className="text-3xl">
+                    <p style={{
+                    fontSize: size,
+                    }}>
                         Enter information about your access needs.
                     </p>
                 </Grid>
@@ -172,7 +237,9 @@ export default function Instructions() {
                                     height = {80}
                     />
                     <p></p>
-                    <p className="text-3xl">
+                    <p style={{
+                    fontSize: size,
+                    }}>
                         You can edit this later because it is saved on your device.
                     </p>
                 </Grid>
@@ -189,7 +256,9 @@ export default function Instructions() {
                                     width = {160}
                                     height = {80}
                     />
-                    <p className="text-3xl">
+                    <p style={{
+                    fontSize: size,
+                    }}>
                         When you have finished click the "reload page" button.
                     </p>
                 </Grid>
@@ -202,7 +271,9 @@ export default function Instructions() {
                                     height = {80}
                     />
                     <p></p>
-                    <p className="text-3xl">
+                    <p style={{
+                    fontSize: size,
+                    }}>
                         After this click the "download now" button. 
                     </p>
                 </Grid>
@@ -215,7 +286,9 @@ export default function Instructions() {
                                     height = {80}
                     />
                     <p></p>
-                    <p className="text-3xl">
+                    <p style={{
+                    fontSize: size,
+                    }}>
                         This downloads your access rider. 
                     </p>
                 </Grid>
@@ -228,13 +301,17 @@ export default function Instructions() {
                                     height = {80}
                     />
                     <p></p>
-                    <p className="text-3xl">
+                    <p style={{
+                    fontSize: size,
+                    }}>
                         It downloads as a <strong>PDF</strong>. {/* make pdf bold */}
                     </p>
                 </Grid>
 
                 <br />
-                    <p className="text-3xl">
+                    <p style={{
+                    fontSize: size,
+                    }}>
                         <strong>PDF</strong>: A PDF is a digital document format with standard text and image formatting.
                     </p>
                 <br />
@@ -247,7 +324,9 @@ export default function Instructions() {
                                     height = {80}
                     />
                     <p></p>
-                    <p className="text-3xl">
+                    <p style={{
+                    fontSize: size,
+                    }}>
                         You can choose another file type if you like.
                     </p>
                 </Grid>
