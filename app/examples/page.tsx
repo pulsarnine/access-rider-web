@@ -6,6 +6,7 @@ import { PDFViewer } from '@react-pdf/renderer';
 import DisplayRider1 from './rider1display';
 import PdfReactPdf from './rider1display';
 import { createRoot } from 'react-dom/client';
+import Grid from '../learn-more/grid';
 
 export default function Examples() {
     useEffect ( () => {
@@ -13,6 +14,7 @@ export default function Examples() {
     }, []);
     return(
         <>
+        <main id="main">
         <div className="p-8 py-10">
             <p>
                 Access riders can come in many forms, both more detailed or more concise, whichever will best suit your needs and 
@@ -40,25 +42,33 @@ export default function Examples() {
             </a>
             <br />
             <br />
+            {/* add padding and divs here */}
             <p>
                 The first example is an access rider for a performance artist. It is shorter, just a page long and contains 
                 fewer sections. It consicely details access needs, emergency contact information and provides a link for more
                 information about Lupus, the individual's condition. 
             </p>
             <br />
+                <iframe 
+                    className="px-4"
+                    src="/Access Rider Example 1.pdf" width="100%" height="700px" 
+                />
             {/* <PdfReactPdf /> */}
+            <br />
+            <Grid>
                 <a href="access-rider-docs/Access Rider Example 1.docx" download="Access Rider Example 1">
-                <Button>
-                Download Example 1.docx
-                </Button>
+                    <Button>
+                        Download Example 1.docx
+                    </Button>
                 </a>
-            <br />
-            <br />
-            <a href="/Access Rider Example 1.pdf" download="Access Rider Example 1">
-                <Button>
-                    Download Example 1.pdf 
-                </Button>
-            </a>
+                <br />
+                <br />
+                <a href="/Access Rider Example 1.pdf" download="Access Rider Example 1">
+                    <Button>
+                        Download Example 1.pdf 
+                    </Button>
+                </a>
+            </Grid>
             <br />
             <br />
             <p>
@@ -67,19 +77,25 @@ export default function Examples() {
                 description and some links to eqiuipment that would be useful to have. 
             </p>
             <br />
+            <iframe 
+                className="px-4"
+                src="/Access Rider Example 2.pdf" width="100%" height="700px"
+            />
+            <br />
+            <Grid>
                 <a href="/Access Rider Example 2.docx" download="Access Rider Example 2">
-                <Button>
-                    Download Example 2.docx
-                </Button>
+                    <Button>
+                        Download Example 2.docx
+                    </Button>
                 </a>
-            <br />
-            <br />
-            <a href="/Access Rider Example 2.pdf" download="Access Rider Example 2">
-                <Button>
-                    Download Example 2.pdf
-                </Button>
-            </a>
-
+                <br />
+                <br />
+                <a href="/Access Rider Example 2.pdf" download="Access Rider Example 2">
+                    <Button>
+                        Download Example 2.pdf
+                    </Button>
+                </a>
+            </Grid>
         </div>
         <div className="p-8 py-10">
             <h2 className="text-3xl">
@@ -135,6 +151,7 @@ export default function Examples() {
 
             
         </div>
+        </main>
         </>
     )
 }

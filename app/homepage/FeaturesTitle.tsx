@@ -55,6 +55,7 @@ export default function FeaturesTitle() {
   ));
 
   return (
+    <main id="main">
     <div className={classes.wrapper}>
       <Grid gap={80}>
         <Grid.Col span={{ base: 12, md: 5 }}>
@@ -66,16 +67,19 @@ export default function FeaturesTitle() {
             Have a look around the site and when you're ready head to the Create page to write your own access rider.
           </Text>
 
-          <Link href="/create">
+          
             <Button
               variant="gradient"
               gradient={{ deg: 133, from: 'blue', to: 'cyan' }}
               size="lg"
               radius="md"
               mt="xl"
-            >Create Page
+            >
+              <Link href="/create">
+                Create Page
+              </Link>
             </Button>               
-          </Link>
+          
 
         </Grid.Col>
         <Grid.Col span={{ base: 12, md: 7 }}>
@@ -85,5 +89,6 @@ export default function FeaturesTitle() {
         </Grid.Col>
       </Grid>
     </div>
+    </main>
   );
 }

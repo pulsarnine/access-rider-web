@@ -1,32 +1,12 @@
-// export default function SkipLink() {
-//     let test = ''
-//   return (
-//     <Button onClick="document.getElementByClass">
-        
-//     </Button>
-//   )
-// }
-
-
-
-// // .focus 
-
-//     {/* <a href="#main" className="skip-link">
-//         {`
-//           .skip-link {
-//             position: absolute;
-//             top: 0;
-//             right: 100%; /* moves off screen */
-//             z-index: 500; /* some number that will make sure it covers other elements */
-//           }
-
-//           .skip-link:focus {
-//             right: auto;
-//             background-color: #000;
-//             color: #fff;
-//             border: #fff 3px solid;
-//             padding: 1em;
-//           }
-//         `}
-//       Skip to content
-//     </a> */}
+// components/SkipLink.tsx
+"use client";
+export default function SkipLink() {
+  return (
+    <a
+      href="#main"
+      className="absolute left-[-10000px] top-auto focus:left-4 focus:top-4 focus:bg-white focus:text-black p-2 z-50"
+    >
+      Skip to main content
+    </a>
+  );
+}

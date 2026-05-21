@@ -22,6 +22,7 @@ export default function Instructions() {
 
     return (
         <>
+        <main id="main">
         {/* size change buttons */}
         <p className="flex items-center justify-center">Change Fontsize:</p>
         <ul className="flex items-center justify-center gap-4 mt-10">
@@ -335,6 +336,7 @@ export default function Instructions() {
                 {/* (Bear in mind that a PDF can be difficult to work with screen readers so often 
                     the OpenDoc choice is the most accessible format.)  */}
             </div>
+            </main>
         </>
     )
 }

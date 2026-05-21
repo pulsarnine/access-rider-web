@@ -15,6 +15,7 @@ export default function Explanation() {
     }, []);
     return (
         <>
+        <main id="main">
         <FAQSimple />
         <div className="p-10 py-10">
             <h2 className="text-3xl">
@@ -101,6 +102,7 @@ export default function Explanation() {
             </p>
             <CharityLinks />
             </div>
+            </main>
         </>
     )
 }   

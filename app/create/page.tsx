@@ -16,6 +16,7 @@ export default function Create() {
   }, []);
     return(
       <>
+      <main id="main">
         <div className="flex justify-center p-8">
           <p>
             Writing an Access Rider can be emotionally difficult, due to the barriers that society puts up for disabled people, 
@@ -65,6 +66,7 @@ export default function Create() {
         <Button>
           <DownloadLink />
         </Button>
+        </main>
       </>
     )
 }
