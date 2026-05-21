@@ -1,8 +1,5 @@
 import { PDFViewer } from '@react-pdf/renderer';
 import MyPDF from "./MyPDF";
-//import React from 'react';
-//import ReactDOM from 'react-dom';
-
 
 const GeneratePDFViewer = () => {
   return (

@@ -60,8 +60,15 @@ export default function Create() {
         <div className="p-8">
         <UserInput />
         </div>
-        {/* <GenerateDocument /> */}
-        <GeneratePDFViewer />
+        {/* <Button "object.onclick = GeneratePDFViewer(){GeneratePDFViewer}"; >
+          Generate PDF
+        </Button>
+         */}
+         {/* alternative where it goes to a new page to reload instead of having to refresh page */}
+        <Button>
+        <a href="../download">download page</a>
+        </Button>
+
         <Reset />
         <Button>
           <DownloadLink />
