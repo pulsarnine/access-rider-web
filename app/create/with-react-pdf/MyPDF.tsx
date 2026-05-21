@@ -6,6 +6,7 @@ import todaysDate from './get-date';
 //import { useSetFont } from '@/app/components/SetFontProvider';
 //import { useLocalStorage } from '@mantine/hooks';
 //import { Commissioner } from 'next/font/google';
+import userChoice from './sharingChoice';
 
 
 // set all styles 
@@ -145,6 +146,8 @@ var sharing = "placeholder"
 sharing = String(localStorage.getItem("sharing"));
 sharing = sharing.substring(1, sharing.length-1);
 
+
+
 const MyPDF = () => {
  
   return (
@@ -193,6 +196,7 @@ const MyPDF = () => {
           <Text style={styles.text}>{supportingInfo}</Text>
 
           {/* footer */}
+          <Text style={styles.subscript}>{userChoice}</Text>
          <Text style={styles.subscript}>This document was created on {todaysDate}</Text>
          <Text style={styles.subscript}> This document was made with access-rider-web</Text>
         </View>

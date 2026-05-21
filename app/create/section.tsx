@@ -1,3 +1,5 @@
+'use client'
+
 //import React, { useState } from 'react';
 import { Button, Select, TextInput, ComboboxItem } from '@mantine/core';
 import { useLocalStorage } from 'usehooks-ts'
@@ -272,12 +274,22 @@ export default function UserInput() {
       {/* selection for two types of sharing info  */}
       {/* doesnt work */}
       {/* <Select 
-      value={sharing}
-      onChange={(event) => setSharing(event.currentTarget.value)}
+
       label="Sharing Notice"
       placeholder="Choose Option"
       data={["Allow Sharing","No Sharing"]}
     /> */}
-  </>
+
+    <TextInput
+      size = "lg"
+      value={sharing}
+      onChange={(event) => setSharing(event.currentTarget.value)}
+      label="Sharing Notice"
+      description="Adds a sharing comment on the access rider type 'y' to allow sharing or 'n' to disallow it"
+      placeholder="n"
+      />
+
+    </>,
+
   );
 } 
