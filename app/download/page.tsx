@@ -1,9 +1,14 @@
-'use client'
+"use client";
 
-import GeneratePDFViewer from "../create/with-react-pdf/generate-pdf"
+import dynamic from "next/dynamic";
+
+const GeneratePDFViewer = dynamic(
+  () => require("@/app/create/with-react-pdf/generate-pdf"),
+  {
+    ssr: false,
+  },
+);
 
 export default function DownloadPage() {
-    return(
-        <GeneratePDFViewer />
-    )
+  return <GeneratePDFViewer />;
 }

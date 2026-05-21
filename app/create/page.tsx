@@ -1,33 +1,45 @@
-'use client'
+"use client";
 import { useEffect } from "react";
-import Image from 'next/image';
+import Image from "next/image";
 import { List, ThemeIcon, Button } from "@mantine/core";
-import { Accessibility } from "@deemlol/next-icons"
+import { Accessibility } from "@deemlol/next-icons";
 // import ThemeSelector from "../components/ColorSwitcher";
 // import ThemeToggle from "../components/ColorSwitcher";
-import UserInput from "./section";
-import GeneratePDFViewer from "./with-react-pdf/generate-pdf";
-import DownloadLink from "./with-react-pdf/DownloadLink";
 import Reset from "./with-react-pdf/RefreshBtn";
+import dynamic from "next/dynamic";
+
+const DownloadLink = dynamic(
+  () => require("@/app/create/with-react-pdf/DownloadLink"),
+  {
+    ssr: false,
+  },
+);
+
+const UserInput = dynamic(() => require("@/app/create/section"), {
+  ssr: false,
+});
 
 export default function Create() {
-    useEffect ( () => {
-      document.title = "Access Rider ┃ Create";
+  useEffect(() => {
+    document.title = "Access Rider ┃ Create";
   }, []);
-    return(
-      <>
+  return (
+    <>
       <main id="main">
         <div className="flex justify-center p-8">
           <p>
-            Writing an Access Rider can be emotionally difficult, due to the barriers that society puts up for disabled people, 
-            so take the time you need to write this document. The data you input and save will be stored locally on your device 
-            so you can take breaks and come back when you want to. Many people find it helpful to talk through and write this 
-            document with a trusted friend/family member or professional, so do seek out this support if you feel you would benefit 
-            from it. 
+            Writing an Access Rider can be emotionally difficult, due to the
+            barriers that society puts up for disabled people, so take the time
+            you need to write this document. The data you input and save will be
+            stored locally on your device so you can take breaks and come back
+            when you want to. Many people find it helpful to talk through and
+            write this document with a trusted friend/family member or
+            professional, so do seek out this support if you feel you would
+            benefit from it.
           </p>
         </div>
         <div className="p-8">
-          <List 
+          <List
             type="ordered"
             center
             icon={
@@ -35,60 +47,60 @@ export default function Create() {
                 <Accessibility size={16} />
               </ThemeIcon>
             }
-          >  
-          
+          >
+            <List.Item>Enter your information in the sections below</List.Item>
             <List.Item>
-              Enter your information in the sections below
+              You can come back and edit this later. You could also do this in
+              bullet points if you wish.
             </List.Item>
             <List.Item>
-              You can come back and edit this later. You could also do this in bullet points if you wish.
-            </List.Item>
-            <List.Item>
-              Once you are happy you have included all the sections you want, press the final download button to 
-              export your document as a .pdf file.
+              Once you are happy you have included all the sections you want,
+              press the final download button to export your document as a .pdf
+              file.
             </List.Item>
           </List>
         </div>
         <div className="p-8">
-        <Image
-          src="/frogg.jpg"
-          width={500}
-          height={500}
-          alt="Picture of a green frog"
-        />
+          <Image
+            src="/frogg.jpg"
+            width={500}
+            height={500}
+            alt="Picture of a green frog"
+          />
         </div>
         <div className="p-8">
-        <UserInput />
+          <UserInput />
         </div>
         {/* <Button "object.onclick = GeneratePDFViewer(){GeneratePDFViewer}"; >
           Generate PDF
         </Button>
          */}
-         {/* alternative where it goes to a new page to reload instead of having to refresh page */}
+        {/* alternative where it goes to a new page to reload instead of having to refresh page */}
         <Button>
-        <a href="../download">download page</a>
+          <a href="../download">download page</a>
         </Button>
 
         <Reset />
         <Button>
           <DownloadLink />
         </Button>
-        </main>
-      </>
-    )
+      </main>
+    </>
+  );
 }
 
-// this page needs: 
-// title and subheading 
-// button to add section 
+// this page needs:
+// title and subheading
+// button to add section
 // implemented through button to create,
-// then text inputs for section title and paragraph text 
+// then text inputs for section title and paragraph text
 // then save button to add it as a (still editable section)
-// compile button for creating into one document at end 
-// storing on cookies to allow user to return and edit at a later date 
+// compile button for creating into one document at end
+// storing on cookies to allow user to return and edit at a later date
 // export button for open doc format, or word or pdf etc..
 
-          {/*style={{
+{
+  /*style={{
             // use the src property of the image object
             backgroundImage: `url(${backgroundImage.src})`,
             // other styles
@@ -100,4 +112,5 @@ export default function Create() {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center'
-          }}*/}
+          }}*/
+}

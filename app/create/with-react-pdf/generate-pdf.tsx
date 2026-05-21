@@ -1,10 +1,14 @@
-import { PDFViewer } from '@react-pdf/renderer';
-import MyPDF from "./MyPDF";
+import { PDFViewer } from "@react-pdf/renderer";
+import dynamic from "next/dynamic";
+
+const MyPDF = dynamic(() => require("@/app/create/with-react-pdf/MyPDF"), {
+  ssr: false,
+});
 
 const GeneratePDFViewer = () => {
   return (
     <div>
-      <PDFViewer style={{ width: '100%', height: '500px' }}>
+      <PDFViewer style={{ width: "100%", height: "500px" }}>
         <MyPDF />
       </PDFViewer>
     </div>

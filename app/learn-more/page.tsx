@@ -17,10 +17,11 @@ export default function Explanation() {
         <>
         <main id="main">
         <FAQSimple />
-        <div className="p-10 py-10">
+        <div className="p-10 py-3">
             <h2 className="text-3xl">
                 In an Emergency
             </h2>
+            <br />
             <p>
                 Source: 
                 { " " }
@@ -54,6 +55,7 @@ export default function Explanation() {
         </div>
         <div className="p-10 py-10">
             <h2 className="text-3xl">Further Reading on Access Riders</h2>
+            <br />
 
             <Link className='text-ul' href="https://historicengland.org.uk/advice/inclusion/make-heritage-accessible/access-rider/">
                 <Button variant="filled" color="teal" size="sm">
@@ -76,7 +78,7 @@ export default function Explanation() {
                 This site provides information about how to write an access rider and FAQs, as well as an alternative document template.
             </p>
         </div>    
-        <div className="p-10 py-10">
+        <div className="p-10 py-3">
             <h2 className="text-3xl">
                 For Employers    
             </h2>     
@@ -95,11 +97,12 @@ export default function Explanation() {
             </a>
             {/* would be cool to make this so that you can search links */}
             </div>
-            <div className="p-10 py-10">
+            <div className="p-10 py-3">
             <p>
-                It is also worth noting down some of these charities who may be able to provide further support or reading 
+                It is also worth noting some of these charities who may be able to provide further support or reading 
                 for specific access requirements. Links for many different charities can be found below:
             </p>
+            <br />
             <CharityLinks />
             </div>
             </main>

@@ -6,6 +6,7 @@ import React, { useEffect, useState } from "react";
 import HeaderSimple from '../components/HeaderSimple';
 import Image from 'next/image';
 import Grid from '../learn-more/grid';
+import { ArrowDownRight } from "@deemlol/next-icons";
 
 export default function Instructions() {
     useEffect ( () => {
@@ -27,22 +28,22 @@ export default function Instructions() {
         <p className="flex items-center justify-center">Change Fontsize:</p>
         <ul className="flex items-center justify-center gap-4 mt-10">
           <li>
-            <Button 
+            <button 
                 onClick={() => setSize(size - 4)} 
                 className="py-2 px-6 rounded shadow bg-[#333333] 
                 text-white hover:bg-[#222222]"
             >
             Decrease
-            </Button>
+            </button>
           </li>
           <li>
-            <Button 
+            <button 
                 onClick={() => setSize(size + 4)}
                 className="py-2 px-6 rounded shadow bg-[#333333] 
                 text-white hover:bg-[#222222]"
             >
             Increase
-            </Button>
+            </button>
           </li>
         </ul>
 
@@ -60,38 +61,31 @@ export default function Instructions() {
                 <p style={{
                     fontSize: size-8,
                     }}>
-                The 
-                <Link href="/examples">
-                    <Button variant="filled" color="teal" size="sm">
-                    Examples
-                    </Button>                
+                The {" "}
+                <Link href="/examples">  
+                    <strong>Examples</strong>          
                 </Link>
-                page contains examples of Access Riders for you to look at and download. 
+                
+                {" "} page contains examples of Access Riders for you to look at and download. 
                 You can see sections to consider when writing your own Access Rider.
                 <br />
-                The 
+                The {" "}
                 <Link href="/create">
-                    <Button variant="filled" color="teal" size="sm">
-                    Create
-                    </Button> 
+                    <strong>Create</strong> 
                 </Link>
-                page is for writing and downloading your own document with your access needs and information detailed how you want to share it. 
+                {" "} page is for writing and downloading your own document with your access needs and information detailed how you want to share it. 
                 <br />
-                The 
+                The {" "}
                 <Link href="/how-to-use">
-                    <Button variant="filled" color="teal" size="sm">
-                    How To
-                    </Button>
+                    <strong>How To</strong>
                 </Link>
-                page is this page. It teaches you how to use the website.
+                {" "} page is this page. It teaches you how to use the website.
                 <br /> 
-                The 
+                The {" "}
                 <Link href="/learn-more">
-                    <Button variant="filled" color="teal" size="sm">
-                    Learn More
-                    </Button>
+                    <strong>Learn More</strong>
                 </Link>
-                page is for people who are sent an access rider, or others who are learning, to find out more about the document and what to do 
+                {" "} page is for people who are sent an access rider, or others who are learning, to find out more about the document and what to do 
                 when they are sent one to look at.
                 </p>
             </div>

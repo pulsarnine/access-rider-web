@@ -3,10 +3,9 @@ import Link from 'next/link'
 import { Button } from "@mantine/core";
 import React, { useEffect } from "react";
 import { PDFViewer } from '@react-pdf/renderer';
-import DisplayRider1 from './rider1display';
-import PdfReactPdf from './rider1display';
 import { createRoot } from 'react-dom/client';
 import Grid from '../learn-more/grid';
+import { ArrowDownRight } from '@deemlol/next-icons';
 
 export default function Examples() {
     useEffect ( () => {
@@ -64,8 +63,11 @@ export default function Examples() {
                 <br />
                 <br />
                 <a href="/Access Rider Example 1.pdf" download="Access Rider Example 1">
-                    <Button>
-                        Download Example 1.pdf 
+                    <Button 
+                        variant="filled" color="red" size="sm"
+                        rightSection ={<ArrowDownRight size={16} color="#FFFFFF" strokeWidth={1.5} />}
+                    >
+                            Download Example 1.pdf 
                     </Button>
                 </a>
             </Grid>
@@ -91,7 +93,7 @@ export default function Examples() {
                 <br />
                 <br />
                 <a href="/Access Rider Example 2.pdf" download="Access Rider Example 2">
-                    <Button>
+                    <Button variant="filled" color="red" size="sm">
                         Download Example 2.pdf
                     </Button>
                 </a>
@@ -103,7 +105,7 @@ export default function Examples() {
             </h2>
             <p>
                 This site is just one way of creating and structuring your access rider. If you want to use an alternative 
-                layout or look at different formats for inspiration there are links below from reccomeneded sources for this. 
+                layout or look at different formats for inspiration there are links below from reccomended sources for this. 
             </p>
             <a 
                 className='text-ul' 
@@ -120,7 +122,7 @@ export default function Examples() {
             <a href="/Access-Rider-2026-Template.pdf" 
             download="template"
             >
-                <Button>
+                <Button variant="filled" color="red" size="sm">
                     Download MU Template
                 </Button>
             </a>
