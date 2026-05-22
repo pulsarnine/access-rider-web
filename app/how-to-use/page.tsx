@@ -10,7 +10,7 @@ import { ArrowDownRight } from "@deemlol/next-icons";
 
 export default function Instructions() {
   useEffect(() => {
-    document.title = "Access Rider ┃ How To Use";
+    document.title = "Access Rider Web ┃ How To Use";
   }, []);
   const [size, setSize] = useState(26);
 

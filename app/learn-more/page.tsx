@@ -11,7 +11,7 @@ import { Link2 } from "@deemlol/next-icons";
 
 export default function Explanation() {
   useEffect(() => {
-    document.title = "Access Rider ┃ What is an Access Rider?";
+    document.title = "Access Rider Web ┃ Learn More ";
   }, []);
   return (
     <>

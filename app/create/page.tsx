@@ -22,7 +22,7 @@ const UserInput = dynamic(() => import("@/app/create/section"), {
 
 export default function Create() {
   useEffect(() => {
-    document.title = "Access Rider ┃ Create";
+    document.title = "Access Rider Web ┃ Create";
   }, []);
   return (
     <>

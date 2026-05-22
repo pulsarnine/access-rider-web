@@ -11,7 +11,7 @@ import FooterSimple from "./components/FooterSimple";
 
 export default function Home() {
   useEffect(() => {
-    document.title = "Access Rider";
+    document.title = "Access Rider Web";
   }, []);
   const [size, setSize] = useState(16);
 

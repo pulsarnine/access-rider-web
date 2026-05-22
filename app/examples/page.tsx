@@ -9,7 +9,7 @@ import { ArrowDownRight, Link2 } from "@deemlol/next-icons";
 
 export default function Examples() {
   useEffect(() => {
-    document.title = "Access Rider ┃ Examples";
+    document.title = "Access Rider Web ┃ Examples";
   }, []);
   return (
     <>

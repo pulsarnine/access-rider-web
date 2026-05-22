@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import '@mantine/core/styles.css';
-import { ColorSchemeScript, MantineProvider, mantineHtmlProps } from '@mantine/core';
+import "@mantine/core/styles.css";
+import {
+  ColorSchemeScript,
+  MantineProvider,
+  mantineHtmlProps,
+} from "@mantine/core";
 import HeaderSimple from "./components/HeaderSimple";
-import { Fonts } from './components/fonts';
+import { Fonts } from "./components/fonts";
 import siteFont from "./components/FontDropdown";
 import { SetFontProvider } from "./components/SetFontProvider";
 import FooterSimple from "./components/FooterSimple";
@@ -29,16 +33,20 @@ export default function RootLayout({
       {...mantineHtmlProps}
     >
       <head>
-        <title>Access Rider</title>
+        <title>Access Rider Web</title>
       </head>
 
       <body className={`min-h-full flex flex-col`}>
         <SetFontProvider>
-          <MantineProvider defaultColorScheme="dark"><SkipLink /><HeaderSimple />{children}<FooterSimple /></MantineProvider>
+          <MantineProvider defaultColorScheme="dark">
+            <SkipLink />
+            <HeaderSimple />
+            {children}
+            <FooterSimple />
+          </MantineProvider>
         </SetFontProvider>
         {/* <MantineProvider theme={customTheme} defaultColorScheme="dark">{children}</MantineProvider> */}
       </body>
-
     </html>
   );
 }
