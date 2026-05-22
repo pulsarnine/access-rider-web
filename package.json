@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "preview": "pnpm build && npx serve out"
   },
   "dependencies": {
     "@deemlol/next-icons": "^0.2.7",

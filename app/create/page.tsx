@@ -7,6 +7,7 @@ import { Accessibility } from "@deemlol/next-icons";
 // import ThemeToggle from "../components/ColorSwitcher";
 import Reset from "./with-react-pdf/RefreshBtn";
 import dynamic from "next/dynamic";
+import GeneratePDFViewer from "./with-react-pdf/generate-pdf";
 
 const DownloadLink = dynamic(
   () => import("@/app/create/with-react-pdf/DownloadLink"),
@@ -71,19 +72,20 @@ export default function Create() {
         <div className="p-8">
           <UserInput />
         </div>
+        {/* <GeneratePDFViewer /> */}
         {/* <Button "object.onclick = GeneratePDFViewer(){GeneratePDFViewer}"; >
           Generate PDF
         </Button>
          */}
         {/* alternative where it goes to a new page to reload instead of having to refresh page */}
         <Button>
-          <a href="../download">download page</a>
+          <a href="../download">Preview PDF</a>
         </Button>
 
-        <Reset />
-        <Button>
-          <DownloadLink />
-        </Button>
+        {/* <Reset /> */}
+        {/* <Button> */}
+        <DownloadLink />
+        {/* </Button> */}
       </main>
     </>
   );

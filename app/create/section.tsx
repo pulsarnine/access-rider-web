@@ -11,9 +11,6 @@ import {
 import { useLocalStorage } from "usehooks-ts";
 
 export default function UserInput() {
-  const [text, setText] = useLocalStorage("textInputStore", "hello");
-  // first variable is the name and second is the default that it starts with
-
   //so many variables
   const [name, setName] = useLocalStorage("name", "");
   const [pronouns, setPronouns] = useLocalStorage("pronouns", "");
