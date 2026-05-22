@@ -5,7 +5,7 @@ import { List, ThemeIcon, Button } from "@mantine/core";
 import { Accessibility } from "@deemlol/next-icons";
 // import ThemeSelector from "../components/ColorSwitcher";
 // import ThemeToggle from "../components/ColorSwitcher";
-import Reset from "./with-react-pdf/RefreshBtn";
+// import Reset from "./with-react-pdf/RefreshBtn";
 import dynamic from "next/dynamic";
 import GeneratePDFViewer from "./with-react-pdf/generate-pdf";
 
@@ -78,13 +78,22 @@ export default function Create() {
         </Button>
          */}
         {/* alternative where it goes to a new page to reload instead of having to refresh page */}
-        <Button>
-          <a href="../download">Preview PDF</a>
-        </Button>
+        <div className="pl-8">
+          <Button
+            variant="filled"
+            color="#7EDACD"
+            autoContrast={true}
+            size="sm"
+          >
+            <a href="../download">Preview PDF</a>
+          </Button>
+          <br />
+          <br />
 
-        {/* <Reset /> */}
-        {/* <Button> */}
-        <DownloadLink />
+          {/* <Reset /> */}
+          {/* <Button> */}
+          <DownloadLink />
+        </div>
         {/* </Button> */}
       </main>
     </>

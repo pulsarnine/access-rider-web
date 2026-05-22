@@ -1,34 +1,43 @@
-'use client'
+"use client";
 
 import { Edit, BookOpen, FileText, HelpCircle } from "@deemlol/next-icons";
-import { Button, Grid, SimpleGrid, Text, ThemeIcon, Title } from '@mantine/core';
-import classes from './FeaturesTitle.module.css';
-import { defaultHead } from 'next/head';
+import {
+  Button,
+  Grid,
+  SimpleGrid,
+  Text,
+  ThemeIcon,
+  Title,
+} from "@mantine/core";
+import classes from "./FeaturesTitle.module.css";
+import { defaultHead } from "next/head";
 import Link from "next/link";
 
 const features = [
   {
     icon: Edit,
-    title: 'Create',
-    description: 'The Create page is for making the access rider, with suggested sections and the option to add your own, it is fully customisable and gives you the ability to export your document for further editing and sharing.',
-    link: "/create"
+    title: "Create",
+    description:
+      "The Create page is for making the access rider, with suggested sections and the option to add your own, it is fully customisable and gives you the ability to export your document for further editing and sharing.",
+    link: "/create",
   },
   {
     icon: BookOpen,
-    title: 'How To',
-    description: 'The How To page contains detailed instructions for using the create page. These are in a range of formats including easy read. These instructions are also available on the create page in a simplified form.',
+    title: "How To",
+    description:
+      "The How To page contains detailed instructions for using the create page. These are in a range of formats including easy read. These instructions are also available on the create page in a simplified form.",
   },
   {
-    icon: HelpCircle ,
-    title: 'Learn More',
+    icon: HelpCircle,
+    title: "Learn More",
     description:
-      'What is an access rider? On this page you can learn more about what an access rider is, and get any questions you have about the document answered with a small FAQ section. It is the best page to look for further reading or charity links.',
+      "What is an access rider? On this page you can learn more about what an access rider is, and get any questions you have about the document answered with a small FAQ section. It is the best page to look for further reading or charity links.",
   },
   {
-    icon: FileText ,
-    title: 'Examples',
+    icon: FileText,
+    title: "Examples",
     description:
-      'The examples page has a range of examples of Access Riders from various professions which you can read or download to inspire your own. It also has further reading links.',
+      "The examples page has a range of examples of Access Riders from various professions which you can read or download to inspire your own. It also has further reading links.",
   },
 ];
 
@@ -39,7 +48,7 @@ export default function FeaturesTitle() {
         size={44}
         radius="md"
         variant="gradient"
-        gradient={{ deg: 133, from: 'blue', to: 'cyan' }}
+        gradient={{ deg: 133, from: "blue", to: "cyan" }}
       >
         <feature.icon size={26} />
       </ThemeIcon>
@@ -56,39 +65,39 @@ export default function FeaturesTitle() {
 
   return (
     <main id="main">
-    <div className={classes.wrapper}>
-      <Grid gap={80}>
-        <Grid.Col span={{ base: 12, md: 5 }}>
-          {/* <h1 className={classes.title} order={2}> */}
-          <h1 className="text-5xl">
-            Welcome to Access Rider Web!
-          </h1>
-          <Text c="dimmed">
-            Have a look around the site and when you're ready head to the Create page to write your own access rider.
-          </Text>
+      <div className={classes.wrapper}>
+        <Grid gap={80}>
+          <Grid.Col span={{ base: 12, md: 5 }}>
+            {/* <h1 className={classes.title} order={2}> */}
+            <h1 className="text-5xl">Welcome to Access Rider Web!</h1>
+            <br />
+            <Text c="dimmed">
+              Have a look around the site and when you're ready head to the
+              Create page to write your own access rider.
+            </Text>
+            <br />
+            <Text c="dimmed">
+              This website is a tool to create Access Riders, teach people more
+              about them and raise awareness of their uses.
+            </Text>
 
-          
             <Button
               variant="gradient"
-              gradient={{ deg: 133, from: 'blue', to: 'cyan' }}
+              gradient={{ deg: 133, from: "blue", to: "cyan" }}
               size="lg"
               radius="md"
               mt="xl"
             >
-              <Link href="/create">
-                Create Page
-              </Link>
-            </Button>               
-          
-
-        </Grid.Col>
-        <Grid.Col span={{ base: 12, md: 7 }}>
-          <SimpleGrid cols={{ base: 1, md: 2 }} spacing={30}>
-            {items}
-          </SimpleGrid>
-        </Grid.Col>
-      </Grid>
-    </div>
+              <Link href="/create">Create Page</Link>
+            </Button>
+          </Grid.Col>
+          <Grid.Col span={{ base: 12, md: 7 }}>
+            <SimpleGrid cols={{ base: 1, md: 2 }} spacing={30}>
+              {items}
+            </SimpleGrid>
+          </Grid.Col>
+        </Grid>
+      </div>
     </main>
   );
 }
