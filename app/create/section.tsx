@@ -29,7 +29,7 @@ export default function UserInput() {
   const [workingHours, setWorkingHours] = useLocalStorage("workingHours", "");
   const [location, setLocation] = useLocalStorage("location", "");
   const [comms, setComms] = useLocalStorage("comms", "");
-  const [flare, setFlare] = useLocalStorage("flare", "enter your name");
+  const [flare, setFlare] = useLocalStorage("flare", "");
   const [emergencyName, setEmergencyName] = useLocalStorage(
     "emergencyName",
     "",
