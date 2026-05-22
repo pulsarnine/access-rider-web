@@ -29,8 +29,8 @@ export default function FooterSimple() {
       <Container className={classes.inner}>
         <Image
           src="/favicon.ico"
-          width={10}
-          height={10}
+          width={50}
+          height={50}
           alt="Access-Rider-Dev logo"
         />
         <Text size="xs">
