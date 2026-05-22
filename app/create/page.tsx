@@ -61,14 +61,14 @@ export default function Create() {
             </List.Item>
           </List>
         </div>
-        <div className="p-8">
+        {/* <div className="p-8">
           <Image
             src="/frogg.jpg"
             width={500}
             height={500}
             alt="Picture of a green frog"
           />
-        </div>
+        </div> */}
         <div className="p-8">
           <UserInput />
         </div>
