@@ -9,13 +9,13 @@ import Reset from "./with-react-pdf/RefreshBtn";
 import dynamic from "next/dynamic";
 
 const DownloadLink = dynamic(
-  () => require("@/app/create/with-react-pdf/DownloadLink"),
+  () => import("@/app/create/with-react-pdf/DownloadLink"),
   {
     ssr: false,
   },
 );
 
-const UserInput = dynamic(() => require("@/app/create/section"), {
+const UserInput = dynamic(() => import("@/app/create/section"), {
   ssr: false,
 });
 

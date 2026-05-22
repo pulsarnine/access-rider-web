@@ -26,7 +26,6 @@ importers:
       '@mantine/nprogress':
         specifier: ^9.1.1
         version: 9.1.1(@mantine/core@9.1.1(@mantine/hooks@9.1.1(react@19.2.4))(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(@mantine/hooks@9.1.1(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
-
       '@react-pdf/renderer':
         specifier: ^4.5.1
         version: 4.5.1(react@19.2.4)
@@ -45,6 +44,9 @@ importers:
       react-pdf:
         specifier: ^10.4.1
         version: 10.4.1(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      tailwindcss:
+        specifier: ^4.3.0
+        version: 4.3.0
       usehooks-ts:
         specifier: ^3.1.1
         version: 3.1.1(react@19.2.4)
@@ -76,9 +78,6 @@ importers:
       postcss-simple-vars:
         specifier: ^7.0.1
         version: 7.0.1(postcss@8.5.14)
-      tailwindcss:
-        specifier: ^4
-        version: 4.2.4
       typescript:
         specifier: ^5
         version: 5.9.3
@@ -2367,6 +2366,9 @@ packages:
 
   tailwindcss@4.2.4:
     resolution: {integrity: sha512-HhKppgO81FQof5m6TEnuBWCZGgfRAWbaeOaGT00KOy/Pf/j6oUihdvBpA7ltCeAvZpFhW3j0PTclkxsd4IXYDA==}
+
+  tailwindcss@4.3.0:
+    resolution: {integrity: sha512-y6nxMGB1nMW9R6k96e5gdIFzcfL/gTJRNaqGes1YvkLnPVXzWgbqFF2yLC0T8G774n24cx3Pe8XrKoniCOAH+Q==}
 
   tapable@2.3.3:
     resolution: {integrity: sha512-uxc/zpqFg6x7C8vOE7lh6Lbda8eEL9zmVm/PLeTPBRhh1xCgdWaQ+J1CUieGpIfm2HdtsUpRv+HshiasBMcc6A==}
@@ -4972,6 +4974,8 @@ snapshots:
   tagged-tag@1.0.0: {}
 
   tailwindcss@4.2.4: {}
+
+  tailwindcss@4.3.0: {}
 
   tapable@2.3.3: {}
 

@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 
 const GeneratePDFViewer = dynamic(
-  () => require("@/app/create/with-react-pdf/generate-pdf"),
+  () => import("@/app/create/with-react-pdf/generate-pdf"),
   {
     ssr: false,
   },

@@ -1,7 +1,7 @@
 import { PDFViewer } from "@react-pdf/renderer";
 import dynamic from "next/dynamic";
 
-const MyPDF = dynamic(() => require("@/app/create/with-react-pdf/MyPDF"), {
+const MyPDF = dynamic(() => import("@/app/create/with-react-pdf/MyPDF"), {
   ssr: false,
 });
 

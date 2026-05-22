@@ -1,37 +1,43 @@
-
 // this page needs:
-// title of site and logo 
-// logo and text of the home, create, examples, how to, what is pages 
-// needs to be useable from a keyboard only - tab through 
+// title of site and logo
+// logo and text of the home, create, examples, how to, what is pages
+// needs to be useable from a keyboard only - tab through
 // see this page in easy read button
 // change font, colour etc. of page button
 
-'use client'
+"use client";
 
 //mantine Simpleheader
-import React, { useState } from 'react';
-import { Burger, Container, Divider, Drawer, Group, ScrollArea } from '@mantine/core';
-import { useDisclosure } from '@mantine/hooks';
+import React, { useState } from "react";
+import {
+  Burger,
+  Container,
+  Divider,
+  Drawer,
+  Group,
+  ScrollArea,
+} from "@mantine/core";
+import { useDisclosure } from "@mantine/hooks";
 //import { MantineLogo } from '@mantinex/mantine-logo';
-import classes from './HeaderSimple.module.css';
-import Link from 'next/link';
-import ThemeToggle from './ColorSwitcher';
-import FontDropdown from './FontDropdown';
-import { usePathname } from 'next/navigation';
+import classes from "./HeaderSimple.module.css";
+import Link from "next/link";
+import ThemeToggle from "./ColorSwitcher";
+import FontDropdown from "./FontDropdown";
+import { usePathname } from "next/navigation";
 
 const links = [
-  { link: '/', label: 'Home'},
-  { link: '/create', label: 'Create' },
-  { link: '/examples', label: 'Examples' },
-  { link: '/how-to-use', label: 'How To' },
-  { link: '/learn-more', label: 'Learn More' },
+  { link: "/", label: "Home" },
+  { link: "/create", label: "Create" },
+  { link: "/examples", label: "Examples" },
+  { link: "/how-to-use", label: "How To" },
+  { link: "/learn-more", label: "Learn More" },
 ];
 
 export default function HeaderSimple() {
-  console.log(classes);
+  // console.log(classes);
   const [opened, { toggle, close }] = useDisclosure(false);
   //const [active, setActive] = useState<String>();
-  const active = usePathname()
+  const active = usePathname();
 
   const items = links.map((link) => (
     <Link
